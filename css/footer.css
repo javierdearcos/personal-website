@@ -1,0 +1,17 @@
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+footer blockquote {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 0.75rem;
+  color: var(--muted);
+}
+footer blockquote cite { color: var(--accent); }

@@ -1,0 +1,15 @@
+/* ─── NOW ────────────────────────────────────────────────────── */
+.now-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+.now-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+}
+.now-list li:hover { border-color: var(--accent); }
+.now-list .emoji { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }

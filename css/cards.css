@@ -1,0 +1,113 @@
+/* ─── TAGS & PILLS (shared) ──────────────────────────────────── */
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--accent) 15%, transparent);
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.tag-orange {
+  background: color-mix(in srgb, var(--accent2) 15%, transparent);
+  color: var(--accent2);
+  border-color: color-mix(in srgb, var(--accent2) 30%, transparent);
+}
+.link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--muted);
+  transition: all var(--transition);
+}
+.link-pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* ─── TALK CARD ──────────────────────────────────────────────── */
+.talk-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.talk-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.talk-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.talk-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  flex: 1;
+}
+.talk-event {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.talk-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* ─── COLLAB CARD ────────────────────────────────────────────── */
+.collab-card {
+  flex: 0 0 260px;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.collab-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.collab-type { font-size: 1.2rem; }
+.collab-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+  flex: 1;
+}
+.collab-source { font-size: 0.8rem; color: var(--muted); }
+
+/* ─── POST CARD ──────────────────────────────────────────────── */
+.post-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.post-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.post-icon { font-size: 1.5rem; }
+.post-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  flex: 1;
+}
+.post-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.55; }
+.post-card a { margin-top: auto; font-size: 0.82rem; font-weight: 600; }

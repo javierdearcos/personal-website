@@ -1,0 +1,24 @@
+/* ─── DESIGN TOKENS ──────────────────────────────────────────── */
+:root {
+  --bg:       #0D1117;
+  --surface:  #161B22;
+  --border:   #30363D;
+  --text:     #E6EDF3;
+  --muted:    #8B949E;
+  --accent:   #58A6FF;
+  --accent2:  #F0883E;
+  --radius:   10px;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --transition: 0.2s ease;
+}
+
+[data-theme="light"] {
+  --bg:      #FFFFFF;
+  --surface: #F6F8FA;
+  --border:  #D0D7DE;
+  --text:    #1F2328;
+  --muted:   #656D76;
+  --accent:  #0969DA;
+  --accent2: #CF6A2C;
+}

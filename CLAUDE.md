@@ -58,9 +58,8 @@ GitHub Pages serves the repo as-is.
   languages inline**: every language-specific node is a `data-lang="es|en"` block
   and `applyLang()` (js/i18n.js) shows the active one; UI chrome uses `data-i18n`.
   An empty `en.html` falls back to the Spanish body with an "untranslated" notice.
-  `tools/migrate-blog.py` is the legacy one-time Hexo importer (now superseded; it
-  fetched the live Hexo URLs that are now redirect stubs). `tools/extract-blog-src.py`
-  is the one-time bootstrap that built `blog-src/` from the already-generated pages.
+  To create a post, add a `blog-src/<slug>/` folder and run the build — see
+  `README.md` ("Creating a new post") and `blog-src/README.md` for the format.
   Featured posts are curated in `data/posts.js` (bilingual `{es,en}` fields),
   linking to `/blog/<slug>/`.
 - **Contact** (`/contact/`): no backend; form posts to Formspree (id already set
@@ -82,7 +81,5 @@ js/                     main.js (home), per-subpage entries, shared:
                         components/  custom elements
 data/                   talks collabs posts projects focus tech  (content arrays)
 tools/build-blog.py     Regenerates the bilingual blog from blog-src/
-tools/extract-blog-src.py  One-time bootstrap: blog/ pages -> blog-src/
-tools/migrate-blog.py   Legacy one-time Hexo importer (superseded)
 CNAME .nojekyll         GitHub Pages config
 ```

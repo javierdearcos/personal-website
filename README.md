@@ -18,9 +18,9 @@ python3 -m http.server 8000
 ```
 index.html              Page shell + static sections; declares mount points
 talks/
-  index.html            Full talks listing (home shows 4)
+  index.html            Full talks listing (home shows 3)
 collabs/
-  index.html            Full collaborations listing (home shows 4)
+  index.html            Full collaborations listing (home shows 3)
 projects/
   index.html            Full projects listing (home shows 3)
 contact/
@@ -49,34 +49,70 @@ data/
   talks.js collabs.js   Content as plain data arrays — edit these to update
   posts.js projects.js  the site without touching markup
   focus.js tech.js
+blog-src/
+  <slug>/meta.json      Post metadata (date, category, image, per-language title/desc/read)
+  <slug>/es.html        Post body in Spanish (HTML fragment)
+  <slug>/en.html        Post body in English (HTML fragment; empty = falls back to ES)
 blog/
-  index.html            Post listing (all posts, with category filters)
-  <slug>/index.html     One pre-rendered static page per post
+  index.html            Generated post listing (all posts, with category filters)
+  <slug>/index.html     One generated, pre-rendered static page per post
   <slug>/<image>        Post images, served alongside the page
+tools/
+  build-blog.py         Generates the whole blog from blog-src/
 ```
 
 ## Blog
 
 The blog lives under `/blog/` as fully static, pre-rendered HTML — one folder
-per post. Each post page links the shared `css/main.css` (tokens, nav, footer)
-plus `css/blog.css` (article typography), and `js/blog.js` (theme toggle). The
-posts were migrated from the previous Hexo site; the listing at `/blog/`
-provides category filtering. Featured posts on the home page are curated in
-`data/posts.js` and link to the corresponding `/blog/<slug>/` page.
+per post — but **you never edit those pages by hand**. The source of truth is
+`blog-src/`, and `tools/build-blog.py` generates the pages from it.
 
-The old Hexo URLs (`/YYYY/MM/slug/`) are preserved as static redirect stubs
-(`<meta http-equiv="refresh">` + `rel=canonical`) pointing at the new
+Each post ships **both languages inline**: every language-specific node is a
+`data-lang="es|en"` block and `applyLang()` (in `js/i18n.js`) shows the active
+one — the same toggle used across the site. UI chrome (back link, read time,
+filters, footer) uses `data-i18n` keys. Featured posts on the home page are
+curated in `data/posts.js` and link to the corresponding `/blog/<slug>/` page.
+
+The old URLs (`/YYYY/MM/slug/`) are preserved as static redirect stubs
+(`<meta http-equiv="refresh">` + `rel=canonical`) pointing at the
 `/blog/<slug>/` pages, so existing links and search results keep working on
 GitHub Pages (which has no server-side redirect rules). `CNAME` sets the apex
 domain and `.nojekyll` tells Pages to serve files as-is.
 
-`tools/migrate-blog.py` regenerates the whole blog (post pages, images,
-listing, and redirect stubs) from the live source — re-run it if migrating
-again.
+### Creating a new post
+
+1. **Create the source folder** `blog-src/<slug>/` (the `<slug>` becomes the URL
+   `/blog/<slug>/`). See `blog-src/README.md` for the full format.
+2. **Add `meta.json`** with the post metadata:
+
+   ```json
+   {
+     "dt": "2026-06-17T00:00:00.000Z",
+     "cat": "personal",
+     "img": "cover.jpg",
+     "title": { "es": "Título", "en": "Title" },
+     "desc":  { "es": "Resumen", "en": "Summary" },
+     "read":  { "es": "5 mins.", "en": "5 min" }
+   }
+   ```
+
+   `cat` is one of `personal`, `carrera profesional`, `liderazgo`, `desarrollo`.
+   `dt` (ISO date) sets ordering and the displayed date; `img` is optional.
+3. **Write the body** in `es.html` (Spanish) and, optionally, `en.html`
+   (English) as HTML fragments — just the article content (`<p>`, `<h2>`,
+   `<ul>`, `<figure><img src="cover.jpg">`, etc.), no page shell. Put any images
+   in `blog/<slug>/` and reference them by filename. If `en.html` is empty, the
+   English view falls back to the Spanish body with an "untranslated" notice.
+   When a heading carries an `id`, suffix the English copy's `id`/`href` with
+   `-en` so the two languages don't collide on the same page.
+4. **Generate the site**: `python3 tools/build-blog.py`. This (re)writes every
+   `/blog/<slug>/` page, the `/blog/` listing, and the redirect stubs.
+5. *(Optional)* feature it on the home page by adding an entry to
+   `data/posts.js`.
 
 ## Talks & collaborations
 
-The home page previews only the first four talks and collaborations
+The home page previews only the first three talks and collaborations
 (`PREVIEW_COUNT` in `js/main.js`), each followed by a "see all" link. The full
 lists live on separate subpages — talks at `/talks/` (`js/talks.js` +
 `data/talks.js`) and collaborations at `/collabs/` (`js/collabs.js` +

@@ -6,13 +6,13 @@ Each post page embeds BOTH languages: every language-specific node is wrapped in
 `data-lang="es"` / `data-lang="en"`, and js/i18n.js's applyLang() shows the active
 one (same mechanism as the rest of the site). UI chrome uses `data-i18n` keys.
 
-Source layout (see tools/extract-blog-src.py for the one-time bootstrap):
+Source layout (see blog-src/README.md and README.md "Creating a new post"):
   blog-src/<slug>/meta.json   { dt, cat, img?, title{es,en}, desc{es,en}, read{es,en} }
   blog-src/<slug>/es.html     Spanish body fragment
   blog-src/<slug>/en.html     English body fragment (empty -> falls back to ES)
 
 Outputs: blog/<slug>/index.html (posts), blog/index.html (listing),
-old Hexo redirect stubs, CNAME and .nojekyll. Posts are ordered newest-first by dt.
+old-URL redirect stubs, CNAME and .nojekyll. Posts are ordered newest-first by dt.
 
 Run:  python3 tools/build-blog.py
 """

@@ -1,0 +1,17 @@
+{
+  "dt": "2025-07-04T22:00:00.000Z",
+  "cat": "carrera profesional",
+  "title": {
+    "es": "El Juego del Calamar",
+    "en": "Squid Game"
+  },
+  "desc": {
+    "es": "Cómo nuestro sector se ha convertido en un juego de supervivencia",
+    "en": "How our industry has turned into a survival game"
+  },
+  "read": {
+    "es": "6 mins.",
+    "en": "6 min"
+  },
+  "img": "squid-game.jpg"
+}

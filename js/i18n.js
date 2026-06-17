@@ -70,6 +70,15 @@ const translations = {
     'section.connect.title': 'Conectemos',
     'link.slides': 'Slides',
     'link.video': 'Video',
+    'blog.back': '← Todos los posts',
+    'blog.readSuffix': 'de lectura',
+    'blog.newer': '← Más reciente',
+    'blog.older': 'Más antiguo →',
+    'blog.untranslated': 'Esta entrada todavía no está traducida al inglés. Se muestra la versión original en español.',
+    'blog.index.label': 'Escritos',
+    'blog.index.title': 'Blog',
+    'blog.index.intro': 'Pienso escribiendo. Aquí comparto reflexiones sobre ingeniería, liderazgo, cultura de equipo y carrera profesional.',
+    'blog.filter.all': 'Todo',
     'page.contact.label': 'Redes y contacto',
     'page.contact.title': 'Conectemos',
     'page.contact.intro': '¿Tienes una pregunta, una propuesta o simplemente quieres saludar? Escríbeme con el formulario y te responderé.',
@@ -199,6 +208,15 @@ const translations = {
     'section.connect.title': "Let's connect",
     'link.slides': 'Slides',
     'link.video': 'Video',
+    'blog.back': '← All posts',
+    'blog.readSuffix': 'read',
+    'blog.newer': '← Newer',
+    'blog.older': 'Older →',
+    'blog.untranslated': 'This post has not been translated to English yet. Showing the original Spanish version.',
+    'blog.index.label': 'Writing',
+    'blog.index.title': 'Blog',
+    'blog.index.intro': 'I think by writing. Here I share reflections on engineering, leadership, team culture and career.',
+    'blog.filter.all': 'All',
     'page.contact.label': 'Networks & contact',
     'page.contact.title': "Let's connect",
     'page.contact.intro': 'Have a question, a proposal, or just want to say hi? Drop me a message with the form and I will get back to you.',
@@ -267,6 +285,7 @@ const translations = {
   },
 };
 
+const STORAGE_KEY = 'lang';
 let currentLang = 'es';
 
 /** Look up a single translation in the current language (falls back to the key). */
@@ -274,15 +293,37 @@ export function t(key) {
   return translations[currentLang]?.[key] ?? key;
 }
 
-/** Translate every `[data-i18n]` element into `lang`. */
+/** Resolve the persisted language, defaulting to Spanish. */
+export function initLang() {
+  return localStorage.getItem(STORAGE_KEY) || 'es';
+}
+
+/**
+ * Switch the page to `lang`:
+ *  - rewrite every `[data-i18n]` element from the catalog,
+ *  - show only the matching `[data-lang]` blocks (used by blog posts that ship
+ *    both languages inline), hiding the other,
+ *  - swap `document.title` when the page declares per-language titles on <html>.
+ * The choice is persisted so it carries across pages.
+ */
 export function applyLang(lang) {
   currentLang = lang;
+  localStorage.setItem(STORAGE_KEY, lang);
   document.documentElement.lang = lang;
-  const t = translations[lang];
+
+  const dict = translations[lang];
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
-    if (t[key] !== undefined) el.innerHTML = t[key];
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
   });
+
+  document.querySelectorAll('[data-lang]').forEach((el) => {
+    el.hidden = el.dataset.lang !== lang;
+  });
+
+  const title = document.documentElement.dataset[lang === 'es' ? 'titleEs' : 'titleEn'];
+  if (title) document.title = title;
+
   const toggle = document.getElementById('langToggle');
   if (toggle) {
     toggle.textContent = lang === 'es' ? 'EN' : 'ES';

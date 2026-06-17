@@ -1,0 +1,17 @@
+{
+  "dt": "2025-10-10T22:00:00.000Z",
+  "cat": "personal",
+  "title": {
+    "es": "Tree shaking para la vida real",
+    "en": "Tree shaking for real life"
+  },
+  "desc": {
+    "es": "Como los momentos difíciles también nos ayudan a soltar peso y reflexionar",
+    "en": "How hard moments also help us shed weight and reflect"
+  },
+  "read": {
+    "es": "3 mins.",
+    "en": "3 min"
+  },
+  "img": "tree.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "dt": "2023-01-07T23:00:00.000Z",
+  "cat": "personal",
+  "title": {
+    "es": "El balance del 2022",
+    "en": "Taking stock of 2022"
+  },
+  "desc": {
+    "es": "Mi balance del año 2022.",
+    "en": "Taking stock of my 2022."
+  },
+  "read": {
+    "es": "9 mins.",
+    "en": "9 min"
+  },
+  "img": "2022.jpg"
+}

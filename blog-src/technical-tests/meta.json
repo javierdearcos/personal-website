@@ -1,0 +1,17 @@
+{
+  "dt": "2021-02-01T23:00:00.000Z",
+  "cat": "carrera profesional",
+  "title": {
+    "es": "Pruebas técnicas y procesos de selección",
+    "en": "Technical tests and hiring processes"
+  },
+  "desc": {
+    "es": "Mi experiencia y opinión sobre las pruebas técnicas en procesos de selección",
+    "en": "My experience and opinion on technical tests in hiring processes"
+  },
+  "read": {
+    "es": "10 mins.",
+    "en": "10 min"
+  },
+  "img": "technical-tests.jpg"
+}

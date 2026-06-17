@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="dark" data-title-es="10 años después... Hola Mundo! — Javier de Arcos" data-title-en="10 years later... Hello World! — Javier de Arcos">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,20 +32,21 @@
   </script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
   <nav class="nav" aria-label="Navegación principal">
     <a class="nav-logo" href="/">&gt;_ javierdearcos</a>
     <ul class="nav-links" id="navLinks" role="list">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/career/">Trayectoria</a></li>
-      <li><a href="/talks/">Charlas</a></li>
-      <li><a href="/collabs/">Colaboraciones</a></li>
-      <li><a href="/projects/">Proyectos</a></li>
-      <li><a href="/blog/" aria-current="page">Blog</a></li>
-      <li><a href="/contact/">Contacto</a></li>
+      <li><a href="/" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="/career/" data-i18n="nav.career">Trayectoria</a></li>
+      <li><a href="/talks/" data-i18n="nav.talks">Charlas</a></li>
+      <li><a href="/collabs/" data-i18n="nav.collabs">Colaboraciones</a></li>
+      <li><a href="/projects/" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="/blog/" aria-current="page" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contact/" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="nav-controls">
+      <button class="btn-icon btn-lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
       <button class="btn-icon" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
       <button class="btn-icon nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
@@ -55,21 +56,24 @@
     <div class="container">
       <article class="post">
         <header class="post-header">
-          <a class="post-back" href="/blog/">← Todos los posts</a>
+          <a class="post-back" href="/blog/" data-i18n="blog.back">← Todos los posts</a>
           <div class="post-meta">
-            <span class="tag">🌱 personal</span>
-            <time datetime="2020-06-12">12 de junio de 2020</time>
-            <span class="post-read">· 4 mins. de lectura</span>
+            <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+            <time datetime="2020-06-12"><span data-lang="es">12 de junio de 2020</span><span data-lang="en" hidden>June 12, 2020</span></time>
+            <span class="post-read">· <span data-lang="es">4 mins.</span><span data-lang="en" hidden>4 min</span> <span data-i18n="blog.readSuffix">de lectura</span></span>
           </div>
-          <h1 class="post-title-full">10 años después... Hola Mundo!</h1>
+          <h1 class="post-title-full"><span data-lang="es">10 años después... Hola Mundo!</span><span data-lang="en" hidden>10 years later... Hello World!</span></h1>
         </header>
-        <div class="post-body">
+        <div class="post-body" data-lang="es">
 <figure><picture><img loading="lazy" src="helloWorld.jpg" alt="Mano sujetando un reloj de pulsera con correa de cuero con un paisaje de fondo. Foto de Wil Stewart en Unsplash"></picture></figure><p>Esta es la primera entrada de mi blog y, siendo sinceros, debería haberla escrito hace muchos años…</p><p>Hace unos 10 años comenzaba mi camino en el mundo del software, camino por el cual me siento tremendamente <strong>afortunado</strong>. Han sido años en los que he participado en proyectos muy atractivos, usado tecnologías muy interesantes y conocido personas excepcionales. Han sido años de muy buenos momentos y, como es lógico, de alguno malo también, pero haciendo balance puedo decir que no hubiera podido imaginar un camino tan bonito como el que estoy recorriendo.</p><p>Han sido años que me hubiera encantado compartir, en los que muchas veces me pasó por la cabeza crear un blog, pero me decía a mi mismo que no tenía tiempo y que no tenía conocimientos para hacerlo.</p><h2 id="10-anos-despues"><a href="#10-anos-despues" class="headerlink" title="10 años después"></a>10 años después</h2><p>Y, como cantaban Los Rodríguez, 10 años después me vuelvo a encontrar en el mismo lugar, distinto de aquel chico que empezaba en el mundo del desarrollo de Software, pero casi igual al que soy ahora, con la misma ilusión de empezar este proyecto y también con los mismos bloqueos.</p><p>Con muchas más responsabilidades que hace 10 años, dos niños pequeños y en medio de una pandemia global, tengo que reconocer que el tiempo nunca fue un problema, sino el <strong>miedo y la inseguridad</strong>. El miedo de hacer algo que no fuera perfecto, de no estar a la altura, de recibir críticas… Me ha costado entender que, como dijo Voltaire, “lo perfecto es enemigo de lo bueno”, que la única forma de no fallar es no intentarlo (y ese sí que sería un gran error) y que, aunque el feedback es genial para aprender, la única opinión que debe importar es la que se tiene de uno mismo.</p><p>Con el aprendizaje de estos 10 años, tengo que reconocer que los conocimientos tampoco fueron el problema, sino el <strong>foco y la fuerza de voluntad</strong>. Nuestro campo es muy amplio y es absurdo pensar que llegarás a aprender algo si no te dedicas a ello. Tienes que marcarte un objetivo y tener la voluntad para trabajar y alcanzarlo. Y a eso me he dedicado las últimas semanas.</p><h2 id="¿Por-que-ahora"><a href="#¿Por-que-ahora" class="headerlink" title="¿Por qué ahora?"></a>¿Por qué ahora?</h2><p>Y, después de tanto tiempo, puedes pensar ¿por qué ahora?. Estos son mis motivos:</p><ul><li>Porque me hubiera encantado dar este paso hace 10 años, y <strong>siempre será mejor hoy que mañana</strong> o que dentro de otros 10 años.</li><li>Porque estoy convencido que voy a <strong>aprender</strong> mucho de esta experiencia.</li><li>Porque siempre me gustó <strong>escribir</strong> y es algo que quiero incorporar a mi día a día.</li><li>Porque he sido espectador de nuestra comunidad y me encantaría ser algo más, no porque tenga mucho que decir, sino porque tengo mucho que <strong>preguntar</strong>.</li><li>Porque los momentos que más he disfrutado en estos años son en los que pude <strong>compartir</strong> conocimientos y puntos de vista con mis compañeras y compañeros.</li><li>Porque admiro a muchas personas de nuestro sector que se involucran y comparten sus conocimientos y me encantaría algún día poder <strong>inspirar</strong> a alguien como ellos me han inspirado a mí.</li></ul><h2 id="¿Cual-es-el-plan"><a href="#¿Cual-es-el-plan" class="headerlink" title="¿Cuál es el plan?"></a>¿Cuál es el plan?</h2><p>El plan es el que hubiera sido desde el principio: disfrutar escribiendo este blog y compartiendo lo que hago.</p><p>No me voy a engañar y reconozco que la primera persona para la que escribo este blog actualmente es para mi mismo. Para aprender a comunicar mejor. Para no dejarme llevar por las prisas y aprender despacio, profundizando lo suficiente para interiorizarlo y poder compartirlo. Pero este proyecto pronto dejaría de tener sentido si yo soy el único lector, y espero que a alguien más le resulte útil e interesante y me acompañe en este camino.</p><p>Me gustaría escribir sobre temas en los que tengo más experiencia y sobre otros nuevos que voy aprendiendo. En mi cabeza ahora están:</p><ul><li><strong>Java, Java EE, OSGi, APIs</strong> y tecnologías en las que sigo profundizando.</li><li><strong>HTML, CSS, JavaScript</strong> y tecnologías que estoy aprendiendo para poder acercarme más a ese mito del <em>Full Stack Developer</em>.</li><li><strong>Calidad de software, buenas prácticas y patrones de diseño</strong>.</li><li><strong>Experiencias profesionales</strong> actuales y pasadas que he vivido y que pueden ser útiles para alguien.</li><li><strong>Temas de actualidad</strong> que surjan en nuestra comunidad.</li></ul><p>Mi objetivo es que al final de este año este blog siga vivo y tenga al menos 6 entradas más.</p><p>Si todo sale bien esta será la peor entrada de mi peor blog, pero aún así, espero que alguno la encontreis interesante y decidais visitarme de vez en cuando para compartir esta experiencia conmigo. Y, como decía la canción de Los Rodriguez, ojalá podamos reencontrarnos dentro de 10 años riendo y no llorando por lo que nos deparó el futuro.</p>
+        </div>
+        <div class="post-body" data-lang="en" hidden>
+<figure><picture><img loading="lazy" src="helloWorld.jpg" alt="A hand holding a leather-strap wristwatch with a landscape in the background. Photo by Wil Stewart on Unsplash"></picture></figure><p>This is the first entry of my blog and, honestly, I should have written it many years ago…</p><p>About 10 years ago I began my journey in the world of software, a journey for which I feel tremendously <strong>fortunate</strong>. They have been years in which I've taken part in very appealing projects, used very interesting technologies, and met exceptional people. They've been years of very good moments and, naturally, of some bad ones too, but taking stock I can say I couldn't have imagined a journey as beautiful as the one I'm walking.</p><p>They've been years I would have loved to share, years in which the idea of starting a blog crossed my mind many times, but I'd tell myself I didn't have the time and didn't have the knowledge to do it.</p><h2 id="10-anos-despues-en"><a href="#10-anos-despues-en" class="headerlink" title="10 years later"></a>10 years later</h2><p>And, as Los Rodríguez used to sing, 10 years later I find myself in the same place again, different from that kid who was starting out in the world of software development, but almost the same as the one I am now, with the same excitement to begin this project and also with the same hang-ups.</p><p>With far more responsibilities than 10 years ago, two small children, and in the middle of a global pandemic, I have to admit that time was never the problem, but rather <strong>fear and insecurity</strong>. The fear of making something that wasn't perfect, of not measuring up, of receiving criticism… It's taken me a while to understand that, as Voltaire said, “the perfect is the enemy of the good,” that the only way not to fail is not to try (and that really would be a huge mistake), and that, although feedback is great for learning, the only opinion that should matter is the one you hold of yourself.</p><p>With the learning of these 10 years, I have to admit that knowledge wasn't the problem either, but rather <strong>focus and willpower</strong>. Our field is very broad and it's absurd to think you'll ever learn something if you don't dedicate yourself to it. You have to set yourself a goal and have the will to work and reach it. And that's what I've devoted the last few weeks to.</p><h2 id="¿Por-que-ahora-en"><a href="#¿Por-que-ahora-en" class="headerlink" title="Why now?"></a>Why now?</h2><p>And, after so long, you might wonder: why now? These are my reasons:</p><ul><li>Because I would have loved to take this step 10 years ago, and <strong>today will always be better than tomorrow</strong> or than another 10 years from now.</li><li>Because I'm convinced I'm going to <strong>learn</strong> a lot from this experience.</li><li>Because I always liked to <strong>write</strong> and it's something I want to bring into my everyday life.</li><li>Because I've been a spectator of our community and I'd love to be something more, not because I have a lot to say, but because I have a lot to <strong>ask</strong>.</li><li>Because the moments I've enjoyed most in these years are the ones in which I got to <strong>share</strong> knowledge and points of view with my colleagues.</li><li>Because I admire many people in our industry who get involved and share their knowledge, and I'd love to one day be able to <strong>inspire</strong> someone the way they have inspired me.</li></ul><h2 id="¿Cual-es-el-plan-en"><a href="#¿Cual-es-el-plan-en" class="headerlink" title="What's the plan?"></a>What's the plan?</h2><p>The plan is the one it would have been from the start: to enjoy writing this blog and sharing what I do.</p><p>I'm not going to fool myself, and I admit that right now the first person I'm writing this blog for is myself. To learn to communicate better. To not get carried away by the rush and to learn slowly, going deep enough to internalize it and be able to share it. But this project would soon stop making sense if I'm the only reader, and I hope someone else finds it useful and interesting and joins me on this journey.</p><p>I'd like to write about topics where I have more experience and about new ones I'm learning along the way. The ones on my mind right now are:</p><ul><li><strong>Java, Java EE, OSGi, APIs</strong> and technologies I keep diving deeper into.</li><li><strong>HTML, CSS, JavaScript</strong> and technologies I'm learning so I can get closer to that myth of the <em>Full Stack Developer</em>.</li><li><strong>Software quality, best practices, and design patterns</strong>.</li><li><strong>Professional experiences</strong>, current and past, that I've lived through and that might be useful to someone.</li><li><strong>Current topics</strong> that come up in our community.</li></ul><p>My goal is that by the end of this year this blog will still be alive and have at least 6 more entries.</p><p>If all goes well this will be the worst entry of my worst blog, but even so, I hope some of you find it interesting and decide to visit me every now and then to share this experience with me. And, as the Los Rodríguez song went, I hope we can meet again 10 years from now laughing and not crying over what the future had in store for us.</p>
         </div>
       </article>
 
       <nav class="post-pager" aria-label="Más posts">
-        <a class="pager-link pager-next" href="/blog/clean-code/"><span class="pager-dir">← Más reciente</span><span class="pager-ttl">Clean Code o el sentido común en la programación</span></a>
+        <a class="pager-link pager-next" href="/blog/clean-code/"><span class="pager-dir" data-i18n="blog.newer">← Más reciente</span><span class="pager-ttl"><span data-lang="es">Clean Code o el sentido común en la programación</span><span data-lang="en" hidden>Clean Code, or common sense in programming</span></span></a>
         <span></span>
       </nav>
     </div>
@@ -77,7 +81,7 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Javier de Arcos · <a href="/">Inicio</a> · <a href="/blog/">Blog</a></p>
+      <p>© 2026 Javier de Arcos · <a href="/" data-i18n="nav.home">Inicio</a> · <a href="/blog/" data-i18n="nav.blog">Blog</a></p>
     </div>
   </footer>
 </body>

@@ -18,20 +18,21 @@
   <script type="module" src="/js/blog.js"></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
   <nav class="nav" aria-label="Navegación principal">
     <a class="nav-logo" href="/">&gt;_ javierdearcos</a>
     <ul class="nav-links" id="navLinks" role="list">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/career/">Trayectoria</a></li>
-      <li><a href="/talks/">Charlas</a></li>
-      <li><a href="/collabs/">Colaboraciones</a></li>
-      <li><a href="/projects/">Proyectos</a></li>
-      <li><a href="/blog/" aria-current="page">Blog</a></li>
-      <li><a href="/contact/">Contacto</a></li>
+      <li><a href="/" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="/career/" data-i18n="nav.career">Trayectoria</a></li>
+      <li><a href="/talks/" data-i18n="nav.talks">Charlas</a></li>
+      <li><a href="/collabs/" data-i18n="nav.collabs">Colaboraciones</a></li>
+      <li><a href="/projects/" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="/blog/" aria-current="page" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contact/" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="nav-controls">
+      <button class="btn-icon btn-lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
       <button class="btn-icon" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
       <button class="btn-icon nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
@@ -40,249 +41,249 @@
   <main id="main">
     <div class="container">
       <header class="blog-head">
-        <p class="section-label">Escritos</p>
-        <h1 class="blog-title">Blog</h1>
-        <p class="blog-intro">Pienso escribiendo. Aquí comparto reflexiones sobre ingeniería, liderazgo, cultura de equipo y carrera profesional.</p>
+        <p class="section-label" data-i18n="blog.index.label">Escritos</p>
+        <h1 class="blog-title" data-i18n="blog.index.title">Blog</h1>
+        <p class="blog-intro" data-i18n="blog.index.intro">Pienso escribiendo. Aquí comparto reflexiones sobre ingeniería, liderazgo, cultura de equipo y carrera profesional.</p>
       </header>
 
       <div class="blog-filters" role="group" aria-label="Filtrar por categoría">
-        <button class="blog-filter is-active" data-filter="all" type="button">Todo</button>
-        <button class="blog-filter" data-filter="personal" type="button">🌱 personal</button>
-        <button class="blog-filter" data-filter="carrera" type="button">🚀 carrera profesional</button>
-        <button class="blog-filter" data-filter="liderazgo" type="button">🧭 liderazgo</button>
-        <button class="blog-filter" data-filter="desarrollo" type="button">💻 desarrollo</button>
+        <button class="blog-filter is-active" data-filter="all" type="button" data-i18n="blog.filter.all">Todo</button>
+        <button class="blog-filter" data-filter="personal" type="button">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></button>
+        <button class="blog-filter" data-filter="carrera" type="button">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></button>
+        <button class="blog-filter" data-filter="liderazgo" type="button">🧭 <span data-lang="es">liderazgo</span><span data-lang="en" hidden>leadership</span></button>
+        <button class="blog-filter" data-filter="desarrollo" type="button">💻 <span data-lang="es">desarrollo</span><span data-lang="en" hidden>development</span></button>
       </div>
 
       <ul class="post-list" id="postList" role="list">
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/tree-shaking/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2025-10-10">10 de octubre de 2025</time>
-              <span class="post-read">· 3 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2025-10-10"><span data-lang="es">10 de octubre de 2025</span><span data-lang="en" hidden>October 10, 2025</span></time>
+              <span class="post-read">· <span data-lang="es">3 mins.</span><span data-lang="en" hidden>3 min</span></span>
             </div>
-            <h2 class="post-entry-title">Tree shaking para la vida real</h2>
-            <p class="post-entry-desc">Como los momentos difíciles también nos ayudan a soltar peso y reflexionar</p>
+            <h2 class="post-entry-title"><span data-lang="es">Tree shaking para la vida real</span><span data-lang="en" hidden>Tree shaking for real life</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Como los momentos difíciles también nos ayudan a soltar peso y reflexionar</span><span data-lang="en" hidden>How hard moments also help us shed weight and reflect</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/squid-game/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2025-07-04">4 de julio de 2025</time>
-              <span class="post-read">· 6 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2025-07-04"><span data-lang="es">4 de julio de 2025</span><span data-lang="en" hidden>July 4, 2025</span></time>
+              <span class="post-read">· <span data-lang="es">6 mins.</span><span data-lang="en" hidden>6 min</span></span>
             </div>
-            <h2 class="post-entry-title">El Juego del Calamar</h2>
-            <p class="post-entry-desc">Cómo nuestro sector se ha convertido en un juego de supervivencia</p>
+            <h2 class="post-entry-title"><span data-lang="es">El Juego del Calamar</span><span data-lang="en" hidden>Squid Game</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Cómo nuestro sector se ha convertido en un juego de supervivencia</span><span data-lang="en" hidden>How our industry has turned into a survival game</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/the-window-is-open/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2025-06-11">11 de junio de 2025</time>
-              <span class="post-read">· 3 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2025-06-11"><span data-lang="es">11 de junio de 2025</span><span data-lang="en" hidden>June 11, 2025</span></time>
+              <span class="post-read">· <span data-lang="es">3 mins.</span><span data-lang="en" hidden>3 min</span></span>
             </div>
-            <h2 class="post-entry-title">La ventana está abierta</h2>
-            <p class="post-entry-desc">La importancia de cuidar las relaciones y contar con ellas en momentos de cambio</p>
+            <h2 class="post-entry-title"><span data-lang="es">La ventana está abierta</span><span data-lang="en" hidden>The window is open</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">La importancia de cuidar las relaciones y contar con ellas en momentos de cambio</span><span data-lang="en" hidden>On nurturing relationships and leaning on them in times of change</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="liderazgo">
           <a class="post-entry-link" href="/blog/with-me-or-against-me/">
             <div class="post-entry-meta">
-              <span class="tag">🧭 liderazgo</span>
-              <time datetime="2025-04-11">11 de abril de 2025</time>
-              <span class="post-read">· 6 mins.</span>
+              <span class="tag">🧭 <span data-lang="es">liderazgo</span><span data-lang="en" hidden>leadership</span></span>
+              <time datetime="2025-04-11"><span data-lang="es">11 de abril de 2025</span><span data-lang="en" hidden>April 11, 2025</span></time>
+              <span class="post-read">· <span data-lang="es">6 mins.</span><span data-lang="en" hidden>6 min</span></span>
             </div>
-            <h2 class="post-entry-title">Conmigo o contra mí</h2>
-            <p class="post-entry-desc">La ansiedad por el paso del tiempo en mi vida</p>
+            <h2 class="post-entry-title"><span data-lang="es">Conmigo o contra mí</span><span data-lang="en" hidden>With me or against me</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Sobre la imposición disfrazada de liderazgo, y el matiz que seguimos perdiendo</span><span data-lang="en" hidden>On imposition disguised as leadership, and the nuance we keep losing</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/i-am/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2024-12-01">1 de diciembre de 2024</time>
-              <span class="post-read">· 4 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2024-12-01"><span data-lang="es">1 de diciembre de 2024</span><span data-lang="en" hidden>December 1, 2024</span></time>
+              <span class="post-read">· <span data-lang="es">4 mins.</span><span data-lang="en" hidden>4 min</span></span>
             </div>
-            <h2 class="post-entry-title">Soy</h2>
-            <p class="post-entry-desc">Reflexiones de la palabra ser y lo que soy.</p>
+            <h2 class="post-entry-title"><span data-lang="es">Soy</span><span data-lang="en" hidden>I am</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Reflexiones de la palabra ser y lo que soy.</span><span data-lang="en" hidden>Reflections on the word “to be” and what I am.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/goodbye-songs/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2024-09-20">20 de septiembre de 2024</time>
-              <span class="post-read">· 6 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2024-09-20"><span data-lang="es">20 de septiembre de 2024</span><span data-lang="en" hidden>September 20, 2024</span></time>
+              <span class="post-read">· <span data-lang="es">6 mins.</span><span data-lang="en" hidden>6 min</span></span>
             </div>
-            <h2 class="post-entry-title">Canciones de despedida</h2>
-            <p class="post-entry-desc">Mi primer año y medio en Celonis y la necesidad de preparar esa despedida inevitable que llegará en cualquier trabajo.</p>
+            <h2 class="post-entry-title"><span data-lang="es">Canciones de despedida</span><span data-lang="en" hidden>Goodbye songs</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi primer año y medio en Celonis y la necesidad de preparar esa despedida inevitable que llegará en cualquier trabajo.</span><span data-lang="en" hidden>My first year and a half at Celonis, and the need to prepare for that inevitable goodbye that comes with any job.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/pain-tolerance/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2024-03-03">3 de marzo de 2024</time>
-              <span class="post-read">· 9 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2024-03-03"><span data-lang="es">3 de marzo de 2024</span><span data-lang="en" hidden>March 3, 2024</span></time>
+              <span class="post-read">· <span data-lang="es">9 mins.</span><span data-lang="en" hidden>9 min</span></span>
             </div>
-            <h2 class="post-entry-title">Umbrales del dolor, dolores y formas de aliviarlos</h2>
-            <p class="post-entry-desc">Artículo sobre los dolores emocionales presentes en el trabajo y herramientas para aliviarlos y asegurar un entorno laboral sano donde prime el bienestar emocional.</p>
+            <h2 class="post-entry-title"><span data-lang="es">Umbrales del dolor, dolores y formas de aliviarlos</span><span data-lang="en" hidden>Pain thresholds, pains and ways to relieve them</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Artículo sobre los dolores emocionales presentes en el trabajo y herramientas para aliviarlos y asegurar un entorno laboral sano donde prime el bienestar emocional.</span><span data-lang="en" hidden>An article on the emotional pains present at work and the tools to relieve them and ensure a healthy work environment where emotional well-being comes first.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/trg-23/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2023-10-28">28 de octubre de 2023</time>
-              <span class="post-read">· 5 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2023-10-28"><span data-lang="es">28 de octubre de 2023</span><span data-lang="en" hidden>October 28, 2023</span></time>
+              <span class="post-read">· <span data-lang="es">5 mins.</span><span data-lang="en" hidden>5 min</span></span>
             </div>
-            <h2 class="post-entry-title">TRG23 o cómo hacer comunidad</h2>
-            <p class="post-entry-desc">Mi resumen de lo que ha supuesto la TRG23 para mí.</p>
+            <h2 class="post-entry-title"><span data-lang="es">TRG23 o cómo hacer comunidad</span><span data-lang="en" hidden>TRG23, or how to build community</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi resumen de lo que ha supuesto la TRG23 para mí.</span><span data-lang="en" hidden>My recap of what TRG23 meant to me.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/the-swan/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2023-10-13">13 de octubre de 2023</time>
-              <span class="post-read">· 7 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2023-10-13"><span data-lang="es">13 de octubre de 2023</span><span data-lang="en" hidden>October 13, 2023</span></time>
+              <span class="post-read">· <span data-lang="es">7 mins.</span><span data-lang="en" hidden>7 min</span></span>
             </div>
-            <h2 class="post-entry-title">El Cisne</h2>
-            <p class="post-entry-desc">Los rituales y supersticiones forman parte de nuestro trabajo y están en nuestro día a día. Nuestra labor es desafiarlos para que dejen de serlo y entender lo que hay detrás de ellos.</p>
+            <h2 class="post-entry-title"><span data-lang="es">El Cisne</span><span data-lang="en" hidden>The Swan</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Los rituales y supersticiones forman parte de nuestro trabajo y están en nuestro día a día. Nuestra labor es desafiarlos para que dejen de serlo y entender lo que hay detrás de ellos.</span><span data-lang="en" hidden>Rituals and superstitions are part of our work and woven into our everyday lives. Our job is to challenge them so they stop being so and to understand what lies behind them.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/onboarding-the-other-side/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2023-02-26">26 de febrero de 2023</time>
-              <span class="post-read">· 9 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2023-02-26"><span data-lang="es">26 de febrero de 2023</span><span data-lang="en" hidden>February 26, 2023</span></time>
+              <span class="post-read">· <span data-lang="es">9 mins.</span><span data-lang="en" hidden>9 min</span></span>
             </div>
-            <h2 class="post-entry-title">Al otro lado del onboarding</h2>
-            <p class="post-entry-desc">Cada vez estamos más concienciados de la importancia de los onboardings en las empresas pero en este post quiero hablar del otro lado. ¿Qué es lo que puedo hacer como individuos cuando nos incorporamos a una nueva empresa?</p>
+            <h2 class="post-entry-title"><span data-lang="es">Al otro lado del onboarding</span><span data-lang="en" hidden>The Other Side of Onboarding</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Cada vez estamos más concienciados de la importancia de los onboardings en las empresas pero en este post quiero hablar del otro lado. ¿Qué es lo que puedo hacer como individuos cuando nos incorporamos a una nueva empresa?</span><span data-lang="en" hidden>We&#x27;re increasingly aware of how important onboarding is for companies, but in this post I want to talk about the other side. What can we do as individuals when we join a new company?</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/2022/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2023-01-07">7 de enero de 2023</time>
-              <span class="post-read">· 9 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2023-01-07"><span data-lang="es">7 de enero de 2023</span><span data-lang="en" hidden>January 7, 2023</span></time>
+              <span class="post-read">· <span data-lang="es">9 mins.</span><span data-lang="en" hidden>9 min</span></span>
             </div>
-            <h2 class="post-entry-title">El balance del 2022</h2>
-            <p class="post-entry-desc">Mi balance del año 2022.</p>
+            <h2 class="post-entry-title"><span data-lang="es">El balance del 2022</span><span data-lang="en" hidden>Taking stock of 2022</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi balance del año 2022.</span><span data-lang="en" hidden>Taking stock of my 2022.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/show-yourself/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2022-10-22">22 de octubre de 2022</time>
-              <span class="post-read">· 11 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2022-10-22"><span data-lang="es">22 de octubre de 2022</span><span data-lang="en" hidden>October 22, 2022</span></time>
+              <span class="post-read">· <span data-lang="es">11 mins.</span><span data-lang="en" hidden>11 min</span></span>
             </div>
-            <h2 class="post-entry-title">No te vendas, muéstrate</h2>
-            <p class="post-entry-desc">Por mi propia personalidad y seguramente algún prejuicio o creencia equivocada, he huido durante muchos años de los conceptos de marca personal y la necesidad de saber venderse. Ahora, después de unos años más activo hacia fuera me he dado cuenta de que, al menos para mí, no es cuestión de venderse sino de mostrarse, y aquí me gustaría explicar qué me ha dado atreverme a hacer esto.</p>
+            <h2 class="post-entry-title"><span data-lang="es">No te vendas, muéstrate</span><span data-lang="en" hidden>Don&#x27;t sell yourself, show yourself</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Por mi propia personalidad y seguramente algún prejuicio o creencia equivocada, he huido durante muchos años de los conceptos de marca personal y la necesidad de saber venderse. Ahora, después de unos años más activo hacia fuera me he dado cuenta de que, al menos para mí, no es cuestión de venderse sino de mostrarse, y aquí me gustaría explicar qué me ha dado atreverme a hacer esto.</span><span data-lang="en" hidden>Because of my own personality and surely some prejudice or mistaken belief, for many years I ran away from the concepts of personal branding and the need to know how to sell yourself. Now, after a few years of being more active toward the outside, I&#x27;ve realized that, at least for me, it&#x27;s not a matter of selling yourself but of showing yourself, and here I&#x27;d like to explain what daring to do this has given me.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/onboardings/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2022-09-20">20 de septiembre de 2022</time>
-              <span class="post-read">· 11 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2022-09-20"><span data-lang="es">20 de septiembre de 2022</span><span data-lang="en" hidden>September 20, 2022</span></time>
+              <span class="post-read">· <span data-lang="es">11 mins.</span><span data-lang="en" hidden>11 min</span></span>
             </div>
-            <h2 class="post-entry-title">Onboardings exitosos y catástrofes aéreas</h2>
-            <p class="post-entry-desc">El onboarding me parece el momento más crítico de una etapa profesional. Me gustaría profundizar en qué es lo que hace un onboarding exitoso y qué hay que evitar para tener una catástrofe aérea</p>
+            <h2 class="post-entry-title"><span data-lang="es">Onboardings exitosos y catástrofes aéreas</span><span data-lang="en" hidden>Successful onboardings and air disasters</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">El onboarding me parece el momento más crítico de una etapa profesional. Me gustaría profundizar en qué es lo que hace un onboarding exitoso y qué hay que evitar para tener una catástrofe aérea</span><span data-lang="en" hidden>I think onboarding is the most critical moment of a professional chapter. I&#x27;d like to dig into what makes an onboarding successful and what to avoid so it doesn&#x27;t become an air disaster</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/the-average-life/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2022-08-20">20 de agosto de 2022</time>
-              <span class="post-read">· 5 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2022-08-20"><span data-lang="es">20 de agosto de 2022</span><span data-lang="en" hidden>August 20, 2022</span></time>
+              <span class="post-read">· <span data-lang="es">5 mins.</span><span data-lang="en" hidden>5 min</span></span>
             </div>
-            <h2 class="post-entry-title">Oda a la vida media</h2>
-            <p class="post-entry-desc">La presión de vivir el éxito de nuestro sector y la defensa de la vida media</p>
+            <h2 class="post-entry-title"><span data-lang="es">Oda a la vida media</span><span data-lang="en" hidden>Ode to the average life</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">La presión de vivir el éxito de nuestro sector y la defensa de la vida media</span><span data-lang="en" hidden>The pressure of living up to our industry&#x27;s success, and a defense of the average life</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="desarrollo">
           <a class="post-entry-link" href="/blog/dry/">
             <div class="post-entry-meta">
-              <span class="tag">💻 desarrollo</span>
-              <time datetime="2021-10-14">14 de octubre de 2021</time>
-              <span class="post-read">· 8 mins.</span>
+              <span class="tag">💻 <span data-lang="es">desarrollo</span><span data-lang="en" hidden>development</span></span>
+              <time datetime="2021-10-14"><span data-lang="es">14 de octubre de 2021</span><span data-lang="en" hidden>October 14, 2021</span></time>
+              <span class="post-read">· <span data-lang="es">8 mins.</span><span data-lang="en" hidden>8 min</span></span>
             </div>
-            <h2 class="post-entry-title">DRY no es (sólo) lo que piensas</h2>
-            <p class="post-entry-desc">Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone</p>
+            <h2 class="post-entry-title"><span data-lang="es">DRY no es (sólo) lo que piensas</span><span data-lang="en" hidden>DRY Isn’t (Only) What You Think</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone</span><span data-lang="en" hidden>A reflection on how the DRY software-development principle is usually oversimplified and everything it really entails</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/wonderland/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2021-06-15">15 de junio de 2021</time>
-              <span class="post-read">· 5 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2021-06-15"><span data-lang="es">15 de junio de 2021</span><span data-lang="en" hidden>June 15, 2021</span></time>
+              <span class="post-read">· <span data-lang="es">5 mins.</span><span data-lang="en" hidden>5 min</span></span>
             </div>
-            <h2 class="post-entry-title">Despertando del País de las Maravillas</h2>
-            <p class="post-entry-desc">La ansiedad por el paso del tiempo en mi vida</p>
+            <h2 class="post-entry-title"><span data-lang="es">Despertando del País de las Maravillas</span><span data-lang="en" hidden>Waking up from Wonderland</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">La ansiedad por el paso del tiempo en mi vida</span><span data-lang="en" hidden>The anxiety of time passing in my life</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="desarrollo">
           <a class="post-entry-link" href="/blog/pull-requests/">
             <div class="post-entry-meta">
-              <span class="tag">💻 desarrollo</span>
-              <time datetime="2021-03-09">9 de marzo de 2021</time>
-              <span class="post-read">· 7 mins.</span>
+              <span class="tag">💻 <span data-lang="es">desarrollo</span><span data-lang="en" hidden>development</span></span>
+              <time datetime="2021-03-09"><span data-lang="es">9 de marzo de 2021</span><span data-lang="en" hidden>March 9, 2021</span></time>
+              <span class="post-read">· <span data-lang="es">7 mins.</span><span data-lang="en" hidden>7 min</span></span>
             </div>
-            <h2 class="post-entry-title">Pull Requests y otras herramientas de control</h2>
-            <p class="post-entry-desc">Reflexión sobre si el flujo de Pull Requests es siempre el mejor proceso para cualquier empresa o proyecto</p>
+            <h2 class="post-entry-title"><span data-lang="es">Pull Requests y otras herramientas de control</span><span data-lang="en" hidden>Pull Requests and other control tools</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Reflexión sobre si el flujo de Pull Requests es siempre el mejor proceso para cualquier empresa o proyecto</span><span data-lang="en" hidden>A reflection on whether the Pull Request workflow is always the best process for any company or project</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="carrera">
           <a class="post-entry-link" href="/blog/technical-tests/">
             <div class="post-entry-meta">
-              <span class="tag">🚀 carrera profesional</span>
-              <time datetime="2021-02-01">1 de febrero de 2021</time>
-              <span class="post-read">· 10 mins.</span>
+              <span class="tag">🚀 <span data-lang="es">carrera profesional</span><span data-lang="en" hidden>career</span></span>
+              <time datetime="2021-02-01"><span data-lang="es">1 de febrero de 2021</span><span data-lang="en" hidden>February 1, 2021</span></time>
+              <span class="post-read">· <span data-lang="es">10 mins.</span><span data-lang="en" hidden>10 min</span></span>
             </div>
-            <h2 class="post-entry-title">Pruebas técnicas y procesos de selección</h2>
-            <p class="post-entry-desc">Mi experiencia y opinión sobre las pruebas técnicas en procesos de selección</p>
+            <h2 class="post-entry-title"><span data-lang="es">Pruebas técnicas y procesos de selección</span><span data-lang="en" hidden>Technical tests and hiring processes</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi experiencia y opinión sobre las pruebas técnicas en procesos de selección</span><span data-lang="en" hidden>My experience and opinion on technical tests in hiring processes</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/2020/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2021-01-06">6 de enero de 2021</time>
-              <span class="post-read">· 8 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2021-01-06"><span data-lang="es">6 de enero de 2021</span><span data-lang="en" hidden>January 6, 2021</span></time>
+              <span class="post-read">· <span data-lang="es">8 mins.</span><span data-lang="en" hidden>8 min</span></span>
             </div>
-            <h2 class="post-entry-title">El balance del 2020</h2>
-            <p class="post-entry-desc">Mi balance del año 2020 intentando buscar la parte positiva.</p>
+            <h2 class="post-entry-title"><span data-lang="es">El balance del 2020</span><span data-lang="en" hidden>Looking back at 2020</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi balance del año 2020 intentando buscar la parte positiva.</span><span data-lang="en" hidden>My review of 2020, trying to find the positive side.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="desarrollo">
           <a class="post-entry-link" href="/blog/clean-code/">
             <div class="post-entry-meta">
-              <span class="tag">💻 desarrollo</span>
-              <time datetime="2020-07-22">22 de julio de 2020</time>
-              <span class="post-read">· 10 mins.</span>
+              <span class="tag">💻 <span data-lang="es">desarrollo</span><span data-lang="en" hidden>development</span></span>
+              <time datetime="2020-07-22"><span data-lang="es">22 de julio de 2020</span><span data-lang="en" hidden>July 22, 2020</span></time>
+              <span class="post-read">· <span data-lang="es">10 mins.</span><span data-lang="en" hidden>10 min</span></span>
             </div>
-            <h2 class="post-entry-title">Clean Code o el sentido común en la programación</h2>
-            <p class="post-entry-desc">Cuáles son los puntos más importantes del código limpio en mi experiencia.</p>
+            <h2 class="post-entry-title"><span data-lang="es">Clean Code o el sentido común en la programación</span><span data-lang="en" hidden>Clean Code, or common sense in programming</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Cuáles son los puntos más importantes del código limpio en mi experiencia.</span><span data-lang="en" hidden>The most important points of clean code, in my experience.</span></p>
           </a>
         </li>
         <li class="post-entry" data-cat="personal">
           <a class="post-entry-link" href="/blog/hello-world/">
             <div class="post-entry-meta">
-              <span class="tag">🌱 personal</span>
-              <time datetime="2020-06-12">12 de junio de 2020</time>
-              <span class="post-read">· 4 mins.</span>
+              <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+              <time datetime="2020-06-12"><span data-lang="es">12 de junio de 2020</span><span data-lang="en" hidden>June 12, 2020</span></time>
+              <span class="post-read">· <span data-lang="es">4 mins.</span><span data-lang="en" hidden>4 min</span></span>
             </div>
-            <h2 class="post-entry-title">10 años después... Hola Mundo!</h2>
-            <p class="post-entry-desc">Mi primera entrada de mi blog personal con el porqué de este proyecto.</p>
+            <h2 class="post-entry-title"><span data-lang="es">10 años después... Hola Mundo!</span><span data-lang="en" hidden>10 years later... Hello World!</span></h2>
+            <p class="post-entry-desc"><span data-lang="es">Mi primera entrada de mi blog personal con el porqué de este proyecto.</span><span data-lang="en" hidden>The first entry of my personal blog, with the why behind this project.</span></p>
           </a>
         </li>
       </ul>
@@ -291,7 +292,7 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Javier de Arcos · <a href="/">Inicio</a> · <a href="/blog/">Blog</a></p>
+      <p>© 2026 Javier de Arcos · <a href="/" data-i18n="nav.home">Inicio</a> · <a href="/blog/" data-i18n="nav.blog">Blog</a></p>
     </div>
   </footer>
 </body>

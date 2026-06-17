@@ -1,0 +1,17 @@
+{
+  "dt": "2021-01-06T23:00:00.000Z",
+  "cat": "personal",
+  "title": {
+    "es": "El balance del 2020",
+    "en": "Looking back at 2020"
+  },
+  "desc": {
+    "es": "Mi balance del año 2020 intentando buscar la parte positiva.",
+    "en": "My review of 2020, trying to find the positive side."
+  },
+  "read": {
+    "es": "8 mins.",
+    "en": "8 min"
+  },
+  "img": "2020.jpg"
+}

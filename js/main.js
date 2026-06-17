@@ -21,7 +21,7 @@ import { focusAreas } from '../data/focus.js';
 import { projects } from '../data/projects.js';
 import { technologies } from '../data/tech.js';
 
-import { applyLang, initLangToggle } from './i18n.js';
+import { applyLang, initLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { renderCards } from './render.js';
 import { initNav } from './nav.js';
@@ -61,7 +61,7 @@ function init() {
 
   // Theme + language first paint.
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   // Controls.
   initThemeToggle();

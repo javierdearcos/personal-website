@@ -1,0 +1,17 @@
+{
+  "dt": "2024-12-01T05:00:00.000Z",
+  "cat": "personal",
+  "title": {
+    "es": "Soy",
+    "en": "I am"
+  },
+  "desc": {
+    "es": "Reflexiones de la palabra ser y lo que soy.",
+    "en": "Reflections on the word “to be” and what I am."
+  },
+  "read": {
+    "es": "4 mins.",
+    "en": "4 min"
+  },
+  "img": "me.jpg"
+}

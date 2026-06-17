@@ -1,0 +1,17 @@
+{
+  "dt": "2020-07-22T22:00:00.000Z",
+  "cat": "desarrollo",
+  "title": {
+    "es": "Clean Code o el sentido común en la programación",
+    "en": "Clean Code, or common sense in programming"
+  },
+  "desc": {
+    "es": "Cuáles son los puntos más importantes del código limpio en mi experiencia.",
+    "en": "The most important points of clean code, in my experience."
+  },
+  "read": {
+    "es": "10 mins.",
+    "en": "10 min"
+  },
+  "img": "M104.jpg"
+}

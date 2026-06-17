@@ -1,0 +1,17 @@
+{
+  "dt": "2021-10-14T22:00:00.000Z",
+  "cat": "desarrollo",
+  "title": {
+    "es": "DRY no es (sólo) lo que piensas",
+    "en": "DRY Isn’t (Only) What You Think"
+  },
+  "desc": {
+    "es": "Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone",
+    "en": "A reflection on how the DRY software-development principle is usually oversimplified and everything it really entails"
+  },
+  "read": {
+    "es": "8 mins.",
+    "en": "8 min"
+  },
+  "img": "dry.jpg"
+}

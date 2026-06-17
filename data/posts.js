@@ -1,28 +1,41 @@
 /**
- * Featured blog posts shown in the "Posts" grid.
+ * Featured blog posts shown in the "Posts" grid on the home page.
  * These link to the migrated posts under /blog/. The full archive
  * lives at /blog/.
+ *
+ * `tag`, `title` and `desc` are `{ es, en }` pairs so the cards follow the
+ * global language toggle (see js/components/post-card.js). The full post
+ * bodies are translated separately under blog-src/<slug>/en.html.
  */
 export const posts = [
   {
     icon: '🌳',
-    tag: '🇪🇸 ES · 2025',
-    title: 'Tree shaking para la vida real',
+    tag: { es: 'Personal · 2025', en: 'Personal · 2025' },
+    title: { es: 'Tree shaking para la vida real', en: 'Tree shaking for real life' },
     url: '/blog/tree-shaking/',
-    desc: 'Sobre foco, prioridades y eliminar lo innecesario.',
+    desc: {
+      es: 'Sobre foco, prioridades y eliminar lo innecesario.',
+      en: 'On focus, priorities, and removing the unnecessary.',
+    },
   },
   {
     icon: '🦑',
-    tag: '🇪🇸 ES · 2025',
-    title: 'El Juego del Calamar',
+    tag: { es: 'Carrera · 2025', en: 'Career · 2025' },
+    title: { es: 'El Juego del Calamar', en: 'Squid Game' },
     url: '/blog/squid-game/',
-    desc: 'Sobre el burnout y los juegos que no elegimos jugar.',
+    desc: {
+      es: 'Sobre el burnout y los juegos que no elegimos jugar.',
+      en: "On burnout and the games we don't choose to play.",
+    },
   },
   {
     icon: '⚔️',
-    tag: '🇪🇸 ES · 2025',
-    title: 'Conmigo o contra mí',
+    tag: { es: 'Liderazgo · 2025', en: 'Leadership · 2025' },
+    title: { es: 'Conmigo o contra mí', en: 'With me or against me' },
     url: '/blog/with-me-or-against-me/',
-    desc: 'Sobre liderazgo tóxico y la alternativa de la que casi nunca hablamos.',
+    desc: {
+      es: 'Sobre liderazgo tóxico y la alternativa de la que casi nunca hablamos.',
+      en: 'On toxic leadership and the alternative we rarely talk about.',
+    },
   },
 ];

@@ -1,0 +1,17 @@
+{
+  "dt": "2025-06-11T22:00:00.000Z",
+  "cat": "carrera profesional",
+  "title": {
+    "es": "La ventana está abierta",
+    "en": "The window is open"
+  },
+  "desc": {
+    "es": "La importancia de cuidar las relaciones y contar con ellas en momentos de cambio",
+    "en": "On nurturing relationships and leaning on them in times of change"
+  },
+  "read": {
+    "es": "3 mins.",
+    "en": "3 min"
+  },
+  "img": "run.jpg"
+}

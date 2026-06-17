@@ -1,0 +1,17 @@
+{
+  "dt": "2021-03-09T23:00:00.000Z",
+  "cat": "desarrollo",
+  "title": {
+    "es": "Pull Requests y otras herramientas de control",
+    "en": "Pull Requests and other control tools"
+  },
+  "desc": {
+    "es": "Reflexión sobre si el flujo de Pull Requests es siempre el mejor proceso para cualquier empresa o proyecto",
+    "en": "A reflection on whether the Pull Request workflow is always the best process for any company or project"
+  },
+  "read": {
+    "es": "7 mins.",
+    "en": "7 min"
+  },
+  "img": "pull-requests.jpg"
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="dark" data-title-es="Tree shaking para la vida real — Javier de Arcos" data-title-en="Tree shaking for real life — Javier de Arcos">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,20 +32,21 @@
   </script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <a href="#main" class="skip-link" data-i18n="skip">Saltar al contenido</a>
 
   <nav class="nav" aria-label="Navegación principal">
     <a class="nav-logo" href="/">&gt;_ javierdearcos</a>
     <ul class="nav-links" id="navLinks" role="list">
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/career/">Trayectoria</a></li>
-      <li><a href="/talks/">Charlas</a></li>
-      <li><a href="/collabs/">Colaboraciones</a></li>
-      <li><a href="/projects/">Proyectos</a></li>
-      <li><a href="/blog/" aria-current="page">Blog</a></li>
-      <li><a href="/contact/">Contacto</a></li>
+      <li><a href="/" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="/career/" data-i18n="nav.career">Trayectoria</a></li>
+      <li><a href="/talks/" data-i18n="nav.talks">Charlas</a></li>
+      <li><a href="/collabs/" data-i18n="nav.collabs">Colaboraciones</a></li>
+      <li><a href="/projects/" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="/blog/" aria-current="page" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contact/" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="nav-controls">
+      <button class="btn-icon btn-lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
       <button class="btn-icon" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
       <button class="btn-icon nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
@@ -55,29 +56,32 @@
     <div class="container">
       <article class="post">
         <header class="post-header">
-          <a class="post-back" href="/blog/">← Todos los posts</a>
+          <a class="post-back" href="/blog/" data-i18n="blog.back">← Todos los posts</a>
           <div class="post-meta">
-            <span class="tag">🌱 personal</span>
-            <time datetime="2025-10-10">10 de octubre de 2025</time>
-            <span class="post-read">· 3 mins. de lectura</span>
+            <span class="tag">🌱 <span data-lang="es">personal</span><span data-lang="en" hidden>personal</span></span>
+            <time datetime="2025-10-10"><span data-lang="es">10 de octubre de 2025</span><span data-lang="en" hidden>October 10, 2025</span></time>
+            <span class="post-read">· <span data-lang="es">3 mins.</span><span data-lang="en" hidden>3 min</span> <span data-i18n="blog.readSuffix">de lectura</span></span>
           </div>
-          <h1 class="post-title-full">Tree shaking para la vida real</h1>
+          <h1 class="post-title-full"><span data-lang="es">Tree shaking para la vida real</span><span data-lang="en" hidden>Tree shaking for real life</span></h1>
         </header>
-        <div class="post-body">
+        <div class="post-body" data-lang="es">
 <figure><picture><img loading="lazy" src="tree.jpg" alt="Árbol en un prado verde y con cielo azul. Foto de niko photos en Unsplash"></picture></figure><p>Desde hace un tiempo pienso que la vida es eso que pasa entre visitas al hospital. Eso que pasa mientras uno nace, enferma, visita a otros, los cuida, les da la bienvenida, les dice adiós y finalmente cuando es tú el que se marcha.</p><p>Estos momentos en el hospital son, sin duda, momentos duros, pero que curiosamente me transmiten una cierta calma y paz mental. Son instantes donde la vida te sacude y pone todo patas arriba, pero a la vez, aparta lo superfluo y te centra en lo esencial. Digo esto consciente de mi privilegio, de haber tenido las fuerzas para afrontar lo que la vida me ha presentado, y sin pretender establecer una verdad universal, sino solo compartir mi experiencia personal.</p><p>He llegado a valorar estos momentos. Me obligan a centrarme en el aquí y el ahora, aprendiendo de cada experiencia. Me permiten Olvidar las expectativas y el peso del mundo. Hacer un verdadero “tree shaking”, como cuando empaquetamos nuestro código, eliminando el peso muerto, las dependencias innecesarias. Y que caiga lo que tenga que caer y que se marche lo que se tenga que marchar.</p><p>Aunque he reflexionado mucho sobre esto, no llego a saber si es la sociedad actual, nuestro sector, mi experiencia personal, o mi propia personalidad (especialmente mi autoexigencia), pero he normalizado vivir a mil por hora y sin tiempo para nada. Llenarme de trabajo y de más responsabilidades de las que puedo atender, y sentirme mal cada vez que no llego. Rodearme de ruido. Sentir culpa por cada momento de descanso en el que no hago algo “productivo”. Intento evitarlo, pero la inercia me arrastra de vuelta una y otra vez.</p><p>Por eso, cuando de repente la vida me para en seco, puedo llegar a valorar de la sensación de frenar la inercia y apagar el piloto automático. De salir de esa realidad caótica y detenerme a pensar. Como cuando tienes un ruido constante del que no eres consciente hasta que, de pronto, cesa y te quedas en silencio, y te sientes en paz.</p><p>Estos son momentos para darme permiso: para fallar, para dejar pasar cosas, para no alcanzar esas expectativas imposibles de ser la mejor pareja, padre, empleado, compañero, manager, amigo o ciudadano… Me basta con hacer una sola cosa y hacerla bien (o a veces, ni siquiera eso). Son días de hablar conmigo mismo, aprovechando esas jornadas tan largas que prueban la relatividad del tiempo. Son días “ligeros” para reflexionar, mirar hacia dentro, reorganizar prioridades, eliminar imposiciones absurdas o ya obsoletas, y darme cuenta de lo que realmente valoro y quiero. De borrar lo urgente para quedarme solo con lo importante.</p><p>Son también momentos para soltar esas redes artificiales a las que dedicamos tanto tiempo y esfuerzo, y que en lugar de apoyarnos nos hunden con su peso, y apoyarme en las redes que de verdad cuentan, las que nos sujetan, nos ayudan, nos salvan. Momentos para olvidarme de las personas que te cargan de problemas y excusas, y recordar, en cambio, a esas personas maravillosas que en los momentos importantes, y sin necesidad de pedirlo, te dicen: “tranquilo, yo me ocupo”.</p><p>He llegado a apreciar estos momentos. De olvidar la prisa y adquirir la sabiduría del mago que dice que, cuando el objetivo es claro y verdaderamente importante, nunca llegarás pronto o tarde, sino cuando tengas que llegar. De abrazar ese concepto que tanto me gusta, pero tanto me cuesta, de “underpromise, overdeliver”. Aparcar mi tendencia a llegar a todo y contentar a todos. Dejar caer la autoexigencia por unos días y decirme a mí mismo que, en estas situaciones, lo que haga, a donde llegue, estará más que bien. Volver a aquello que realmente me ayuda, como descansar, leer, escribir o escuchar música. Y nada más.</p><p>Son momentos que, por suerte, pasan; pero igual pasa su sabiduría, esa sabiduría del trauma.</p><p>Espero que esta vez se mantenga el mayor tiempo posible. Poder salir de cada golpe más ligero, más fuerte, con más foco en lo importante. Acostumbrarme a hacer un “tree shaking” de manera continua: eliminar el peso muerto, las dependencias innecesarias. Y que caiga lo que tenga que caer y que se marche lo que se tenga que marchar.</p>
+        </div>
+        <div class="post-body" data-lang="en" hidden>
+<figure><picture><img loading="lazy" src="tree.jpg" alt="A tree in a green meadow under a blue sky. Photo by niko photos on Unsplash"></picture></figure><p>For a while now I've thought that life is what happens between hospital visits. What happens while we are born, fall ill, visit others, care for them, welcome them, say goodbye to them, and finally when it's you who leaves.</p><p>These moments in the hospital are, without a doubt, hard moments, but curiously they bring me a certain calm and peace of mind. They are instants where life shakes you and turns everything upside down, but at the same time, they push aside the superfluous and focus you on what's essential. I say this aware of my privilege, of having had the strength to face what life has put before me, and without claiming to state any universal truth, only to share my own personal experience.</p><p>I've come to value these moments. They force me to focus on the here and now, learning from every experience. They let me forget expectations and the weight of the world. To do a real “tree shaking”, like when we bundle our code, removing the dead weight, the unnecessary dependencies. And let whatever has to fall, fall, and whatever has to leave, leave.</p><p>Even though I've reflected a lot on this, I never quite figure out whether it's today's society, our industry, my personal experience, or my own personality (especially my self-demand), but I've normalized living at a thousand miles an hour with no time for anything. Filling myself with work and more responsibilities than I can handle, and feeling bad every time I fall short. Surrounding myself with noise. Feeling guilty for every moment of rest in which I'm not doing something “productive”. I try to avoid it, but the inertia drags me back again and again.</p><p>That's why, when life suddenly stops me in my tracks, I can come to appreciate the feeling of braking that inertia and switching off the autopilot. Of stepping out of that chaotic reality and pausing to think. Like when you have a constant noise you're not even aware of until, all of a sudden, it stops and you're left in silence, and you feel at peace.</p><p>These are moments to give myself permission: to fail, to let things slide, to not meet those impossible expectations of being the best partner, father, employee, colleague, manager, friend or citizen… It's enough for me to do a single thing and do it well (or sometimes, not even that). They are days for talking with myself, making the most of those long days that prove the relativity of time. They are “light” days to reflect, look inward, reorganize priorities, remove absurd or already obsolete obligations, and realize what I truly value and want. To delete the urgent and keep only what's important.</p><p>They are also moments to let go of those artificial networks we devote so much time and effort to, and which instead of supporting us drag us down with their weight, and to lean on the networks that really count, the ones that hold us up, help us, save us. Moments to forget the people who load you up with problems and excuses, and to remember, instead, those wonderful people who, in the moments that matter and without needing to be asked, tell you: “don't worry, I've got this”.</p><p>I've come to cherish these moments. To forget the rush and gain the wisdom of the wizard who says that, when the goal is clear and truly important, you'll never arrive too early or too late, but exactly when you're meant to. To embrace that idea I love so much yet struggle with so much, of “underpromise, overdeliver”. To park my tendency to get to everything and please everyone. To drop the self-demand for a few days and tell myself that, in these situations, whatever I do, however far I get, will be more than fine. To return to what really helps me, like resting, reading, writing or listening to music. And nothing more.</p><p>They are moments that, luckily, pass; but so does their wisdom, that wisdom of trauma.</p><p>I hope that this time it stays as long as possible. To come out of each blow lighter, stronger, more focused on what matters. To get used to doing a “tree shaking” continuously: removing the dead weight, the unnecessary dependencies. And let whatever has to fall, fall, and whatever has to leave, leave.</p>
         </div>
       </article>
 
       <nav class="post-pager" aria-label="Más posts">
         <span></span>
-        <a class="pager-link pager-prev" href="/blog/squid-game/"><span class="pager-dir">Más antiguo →</span><span class="pager-ttl">El Juego del Calamar</span></a>
+        <a class="pager-link pager-prev" href="/blog/squid-game/"><span class="pager-dir" data-i18n="blog.older">Más antiguo →</span><span class="pager-ttl"><span data-lang="es">El Juego del Calamar</span><span data-lang="en" hidden>Squid Game</span></span></a>
       </nav>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2026 Javier de Arcos · <a href="/">Inicio</a> · <a href="/blog/">Blog</a></p>
+      <p>© 2026 Javier de Arcos · <a href="/" data-i18n="nav.home">Inicio</a> · <a href="/blog/" data-i18n="nav.blog">Blog</a></p>
     </div>
   </footer>
 </body>

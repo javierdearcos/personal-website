@@ -1,0 +1,17 @@
+{
+  "dt": "2020-06-12T22:00:00.000Z",
+  "cat": "personal",
+  "title": {
+    "es": "10 años después... Hola Mundo!",
+    "en": "10 years later... Hello World!"
+  },
+  "desc": {
+    "es": "Mi primera entrada de mi blog personal con el porqué de este proyecto.",
+    "en": "The first entry of my personal blog, with the why behind this project."
+  },
+  "read": {
+    "es": "4 mins.",
+    "en": "4 min"
+  },
+  "img": "helloWorld.jpg"
+}

@@ -27,8 +27,11 @@ GitHub Pages serves the repo as-is.
 - **CSS** is one file per UI area, imported in order by `css/main.css`
   (`tokens → base → layout → components`). `css/blog.css` adds article typography
   for `/blog/` and the listing subpages.
-- **i18n** (`js/i18n.js`): translatable nodes carry `data-i18n="key"`;
-  `applyLang()` rewrites them from the catalog. Default language is **ES**.
+- **i18n** (`js/i18n.js`): translatable nodes carry `data-i18n="key"` and
+  `applyLang()` rewrites them from the catalog. For prose that ships in both
+  languages at once (blog posts), use sibling `data-lang="es|en"` blocks instead —
+  `applyLang()` shows the active one and hides the other. The chosen language is
+  persisted in `localStorage` (`lang`) and carries across pages. Default is **ES**.
 
 ## Conventions & gotchas
 
@@ -48,10 +51,18 @@ GitHub Pages serves the repo as-is.
 
 ## Subsystems
 
-- **Blog** (`/blog/`): fully pre-rendered static HTML, one folder per post,
-  migrated from Hexo. Regenerate the whole blog (pages, images, listing, redirect
-  stubs) with `tools/migrate-blog.py` — don't hand-edit generated pages. Featured
-  posts are curated in `data/posts.js`, linking to `/blog/<slug>/`.
+- **Blog** (`/blog/`): fully pre-rendered static HTML, one folder per post.
+  Content source of truth is `blog-src/<slug>/` (`meta.json` + `es.html` + `en.html`);
+  regenerate the whole blog (pages, listing, redirect stubs) with
+  `tools/build-blog.py` — don't hand-edit generated pages. Each page ships **both
+  languages inline**: every language-specific node is a `data-lang="es|en"` block
+  and `applyLang()` (js/i18n.js) shows the active one; UI chrome uses `data-i18n`.
+  An empty `en.html` falls back to the Spanish body with an "untranslated" notice.
+  `tools/migrate-blog.py` is the legacy one-time Hexo importer (now superseded; it
+  fetched the live Hexo URLs that are now redirect stubs). `tools/extract-blog-src.py`
+  is the one-time bootstrap that built `blog-src/` from the already-generated pages.
+  Featured posts are curated in `data/posts.js` (bilingual `{es,en}` fields),
+  linking to `/blog/<slug>/`.
 - **Contact** (`/contact/`): no backend; form posts to Formspree (id already set
   in the form `action`). `js/contact.js` submits via `fetch` with inline status;
   falls back to a plain POST without JS. `_gotcha` honeypot filters bots.
@@ -64,11 +75,14 @@ talks/ collabs/         Full-list subpages (js/talks.js, js/collabs.js)
 projects/ contact/      Full projects list / contact form
 career/                 Career timeline subpage
 blog/<slug>/            Pre-rendered post pages + images; /blog/ is the listing
+blog-src/<slug>/        Blog content source: meta.json + es.html + en.html
 css/                    main.css imports per-area stylesheets + blog.css
 js/                     main.js (home), per-subpage entries, shared:
                         render.js nav.js i18n.js theme.js
                         components/  custom elements
 data/                   talks collabs posts projects focus tech  (content arrays)
-tools/migrate-blog.py   Regenerates the blog from the Hexo source
+tools/build-blog.py     Regenerates the bilingual blog from blog-src/
+tools/extract-blog-src.py  One-time bootstrap: blog/ pages -> blog-src/
+tools/migrate-blog.py   Legacy one-time Hexo importer (superseded)
 CNAME .nojekyll         GitHub Pages config
 ```

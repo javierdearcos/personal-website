@@ -1,0 +1,17 @@
+{
+  "dt": "2023-10-13T22:00:00.000Z",
+  "cat": "carrera profesional",
+  "title": {
+    "es": "El Cisne",
+    "en": "The Swan"
+  },
+  "desc": {
+    "es": "Los rituales y supersticiones forman parte de nuestro trabajo y están en nuestro día a día. Nuestra labor es desafiarlos para que dejen de serlo y entender lo que hay detrás de ellos.",
+    "en": "Rituals and superstitions are part of our work and woven into our everyday lives. Our job is to challenge them so they stop being so and to understand what lies behind them."
+  },
+  "read": {
+    "es": "7 mins.",
+    "en": "7 min"
+  },
+  "img": "the-swan.jpg"
+}

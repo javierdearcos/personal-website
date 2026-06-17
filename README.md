@@ -94,9 +94,9 @@ list lives at `/projects/`, rendered from `data/projects.js` via the shared
 ## Contact
 
 `/contact/` hosts a contact form plus the same social links shown on the home
-page. The site has no backend, so the form posts to [Formspree](https://formspree.io):
-set your form id in `contact/index.html` (replace `YOUR_FORM_ID` in the form
-`action`). `js/contact.js` enhances it to submit via `fetch` and show an inline
+page. The site has no backend, so the form posts to [Formspree](https://formspree.io)
+(the form id is configured in the `action` of the form in `contact/index.html`).
+`js/contact.js` enhances it to submit via `fetch` and show an inline
 status without leaving the page; with JS disabled it falls back to a normal
 POST. A `_gotcha` honeypot field filters out bots.
 

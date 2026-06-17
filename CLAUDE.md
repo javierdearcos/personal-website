@@ -12,8 +12,12 @@ ES modules and `data/` imports need HTTP (won't work from `file://`):
 python3 -m http.server 8000   # open http://localhost:8000
 ```
 
-There is no build or test step. To "deploy", commit to the default branch —
-GitHub Pages serves the repo as-is.
+There is no build or test step. To "deploy", commit and push to the default
+branch (`main`) — GitHub Pages serves the repo as-is (no CI), redeploying in
+~a minute. `CNAME` (apex domain) and `.nojekyll` (serve files verbatim) at the
+root make it work. If you changed any blog post, run `python3 tools/build-blog.py`
+**before** committing so `blog/` stays in sync with `blog-src/`. See README.md
+("Deploying") for details.
 
 ## Architecture
 

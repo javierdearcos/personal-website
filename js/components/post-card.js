@@ -1,5 +1,5 @@
 /**
- * <post-card> — a featured blog post in the Posts carousel.
+ * <post-card> — a featured blog post in the Posts grid.
  *
  *   el.data = { icon, tag, title, url, desc };
  */

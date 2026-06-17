@@ -1,9 +1,8 @@
 /**
  * Talks subpage entry point.
  *
- * Renders the full list of talks (the home page only previews the first few
- * in a carousel). Reuses the same data, custom element, theme and i18n as the
- * home page.
+ * Renders the full list of talks (the home page only previews the first few).
+ * Reuses the same data, custom element, theme and i18n as the home page.
  */
 import './components/talk-card.js';
 

@@ -28,9 +28,8 @@
 }
 .link-pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
-/* ─── CARD GRID (subpages: /talks/) ──────────────────────────── */
-/* In a grid the cards' carousel `flex: 0 0 …px` basis is inert, so they
-   stretch to fill each track instead of keeping a fixed width. */
+/* ─── CARD GRID (home previews + subpages) ───────────────────── */
+/* Cards stretch to fill each track; the grid wraps to new rows as needed. */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -40,8 +39,6 @@
 
 /* ─── TALK CARD ──────────────────────────────────────────────── */
 .talk-card {
-  flex: 0 0 300px;
-  scroll-snap-align: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -77,8 +74,6 @@
 
 /* ─── COLLAB CARD ────────────────────────────────────────────── */
 .collab-card {
-  flex: 0 0 260px;
-  scroll-snap-align: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -100,8 +95,6 @@
 
 /* ─── POST CARD ──────────────────────────────────────────────── */
 .post-card {
-  flex: 0 0 280px;
-  scroll-snap-align: start;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);

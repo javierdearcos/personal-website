@@ -1,5 +1,5 @@
 /**
- * Podcasts & interviews shown in the "Colaboraciones / Collaborations" carousel.
+ * Podcasts & interviews shown in the "Colaboraciones / Collaborations" grid.
  * `icon` is the media glyph, `iconLabel` its accessible name.
  * `url` is optional — when absent the title renders as plain text.
  */

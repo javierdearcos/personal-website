@@ -34,10 +34,11 @@ GitHub Pages serves the repo as-is.
 
 - **Render cards before the first `applyLang()`** — cards emit `data-i18n`
   labels, so they must exist when the i18n pass runs (see `init` in `js/main.js`).
-- **Home previews only the first N items**, then a "see all" link to a subpage:
-  `CAROUSEL_PREVIEW = 4` (talks, collabs), `PROJECTS_PREVIEW = 3` (`js/main.js`).
-  Subpages (`/talks/`, `/collabs/`, `/projects/`) render the full arrays via the
-  same components + `renderCards()`. One data edit updates both.
+- **Home previews only the first N items** in a wrapping `.card-grid`, then a
+  "see all" link to a subpage: `PREVIEW_COUNT = 4` (talks, collabs),
+  `PROJECTS_PREVIEW = 3` (`js/main.js`). Subpages (`/talks/`, `/collabs/`,
+  `/projects/`) render the full arrays via the same components + `renderCards()`
+  into the same `.card-grid`. One data edit updates both.
 - The element `.data` setter renders immediately, so a component must be
   defined/imported before `createElement`.
 - Repo root holds source **and** year-numbered folders (`2020/`–`2025/`) that are
@@ -65,7 +66,7 @@ career/                 Career timeline subpage
 blog/<slug>/            Pre-rendered post pages + images; /blog/ is the listing
 css/                    main.css imports per-area stylesheets + blog.css
 js/                     main.js (home), per-subpage entries, shared:
-                        render.js nav.js i18n.js theme.js carousel.js
+                        render.js nav.js i18n.js theme.js
                         components/  custom elements
 data/                   talks collabs posts projects focus tech  (content arrays)
 tools/migrate-blog.py   Regenerates the blog from the Hexo source

@@ -1,5 +1,5 @@
 /**
- * <collab-card> — a podcast/interview in the Collaborations carousel.
+ * <collab-card> — a podcast/interview in the Collaborations grid.
  *
  *   el.data = { icon, iconLabel, langTag, title, source, url? };
  *

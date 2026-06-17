@@ -1,5 +1,5 @@
 /**
- * <talk-card> — a single talk in the Talks carousel.
+ * <talk-card> — a single talk in the Talks grid.
  *
  * Usage (set the `data` property, not an attribute):
  *   const el = document.createElement('talk-card');

@@ -1,5 +1,5 @@
 /**
- * Talks shown in the "Charlas / Talks" carousel.
+ * Talks shown in the "Charlas / Talks" grid.
  * `slides` / `video` are optional — links render only when present.
  */
 export const talks = [

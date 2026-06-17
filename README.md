@@ -40,11 +40,10 @@ js/
   projects.js           Projects subpage entry: renders the full projects list
   contact.js            Contact subpage entry: theme/i18n + Formspree submit
   blog.js               Blog entry point: theme + listing category filter
-  render.js             Shared renderCards() helper (home carousels + grids)
+  render.js             Shared renderCards() helper (home previews + subpages)
   nav.js                Shared mobile hamburger toggle (all pages)
   i18n.js               Translation catalog + language toggle
   theme.js              Dark/light theme + persistence
-  carousel.js           Carousel scroll controls
   components/           Custom elements (<talk-card>, <project-card>, …)
 data/
   talks.js collabs.js   Content as plain data arrays — edit these to update
@@ -77,14 +76,15 @@ again.
 
 ## Talks & collaborations
 
-The home page previews only the first four talks and collaborations in their
-carousels (`CAROUSEL_PREVIEW` in `js/main.js`), each followed by a "see all"
-link. The full lists live on separate subpages — talks at `/talks/`
-(`js/talks.js` + `data/talks.js`) and collaborations at `/collabs/`
-(`js/collabs.js` + `data/collabs.js`) — each reusing the same `<talk-card>` /
-`<collab-card>` elements and the shared `renderCards()` helper, just laid out as
-wrapping grids (`.card-grid`) instead of carousels. Adding an item to either
-data array updates both the home preview and its subpage with no markup changes.
+The home page previews only the first four talks and collaborations
+(`PREVIEW_COUNT` in `js/main.js`), each followed by a "see all" link. The full
+lists live on separate subpages — talks at `/talks/` (`js/talks.js` +
+`data/talks.js`) and collaborations at `/collabs/` (`js/collabs.js` +
+`data/collabs.js`) — each reusing the same `<talk-card>` / `<collab-card>`
+elements and the shared `renderCards()` helper. Both the home previews and the
+subpages lay the cards out in the same wrapping grid (`.card-grid`). Adding an
+item to either data array updates both the home preview and its subpage with no
+markup changes.
 
 The same pattern applies to projects: the home page previews the first three
 (`PROJECTS_PREVIEW` in `js/main.js`) followed by a "see all" link, and the full
@@ -106,7 +106,7 @@ POST. A `_gotcha` honeypot field filters out bots.
   matching array — no HTML changes needed.
 - **`main.js`** instantiates a custom element per data item, assigns the item to
   its `.data` property, and appends it to the matching mount point in
-  `index.html` (e.g. `#talksCarousel`).
+  `index.html` (e.g. `#talksGrid`).
 - **Components render into light DOM** (no Shadow DOM), so the global stylesheet
   and the i18n pass apply to them normally.
 - **i18n:** translatable nodes carry `data-i18n="key"`; `applyLang()` rewrites

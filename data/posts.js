@@ -1,5 +1,5 @@
 /**
- * Featured blog posts shown in the "Posts" carousel.
+ * Featured blog posts shown in the "Posts" grid.
  * These link to the migrated posts under /blog/. The full archive
  * lives at /blog/.
  */

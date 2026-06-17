@@ -9,7 +9,7 @@ import './components/project-card.js';
 import { projects } from '../data/projects.js';
 
 import { renderCards } from './render.js';
-import { applyLang, initLangToggle } from './i18n.js';
+import { applyLang, initLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initNav } from './nav.js';
 
@@ -18,7 +18,7 @@ function init() {
   renderCards('projectList', 'project-card', projects);
 
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   initThemeToggle();
   initLangToggle();

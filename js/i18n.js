@@ -19,7 +19,7 @@ const translations = {
     'hero.eyebrow': 'Engineering Manager',
     'hero.role': 'Servant Leader · Team Builder · Continuous Delivery Advocate',
     'hero.desc': 'Apasionado por construir <strong>equipos de alto rendimiento</strong> donde las personas pueden dar lo mejor de sí. Creo que el gran software es primero un problema de personas, y luego técnico.',
-    'hero.cta1': 'Hablemos',
+    'hero.cta1': 'Ver mi trayectoria',
     'hero.cta2': 'Leer el blog ↗',
     'section.about.label': 'Áreas de enfoque',
     'section.about.title': 'Lo que me importa',
@@ -143,7 +143,7 @@ const translations = {
     'career.upm.role': 'Desarrollador de Software (Beca)',
     'career.upm.period': 'Oct 2011 — Jun 2012',
     'career.upm.summary': 'Desarrollé una biblioteca de Realidad Aumentada en lenguaje C, integrada con las bibliotecas gráficas V4L2 y OpenCV.',
-    'footer': '© 2026 Javier de Arcos · Hecho con HTML, CSS y ganas',
+    'footer': '© 2026 Javier de Arcos · Hecho con ❤️ e IA',
   },
   en: {
     'skip': 'Skip to content',
@@ -157,7 +157,7 @@ const translations = {
     'hero.eyebrow': 'Engineering Manager',
     'hero.role': 'Servant Leader · Team Builder · Continuous Delivery Advocate',
     'hero.desc': 'Passionate about building <strong>high-performance teams</strong> where people can do their best work. I believe great software is first a people problem, then a technical one.',
-    'hero.cta1': "Let's talk",
+    'hero.cta1': 'See my career',
     'hero.cta2': 'Read the blog ↗',
     'section.about.label': 'Focus areas',
     'section.about.title': 'What I care about',
@@ -281,7 +281,7 @@ const translations = {
     'career.upm.role': 'Software Developer (Internship)',
     'career.upm.period': 'Oct 2011 — Jun 2012',
     'career.upm.summary': 'Developed an Augmented Reality library in C, integrated with the V4L2 and OpenCV graphic libraries.',
-    'footer': '© 2026 Javier de Arcos · Built with HTML, CSS and passion',
+    'footer': '© 2026 Javier de Arcos · Made with ❤️ and AI',
   },
 };
 

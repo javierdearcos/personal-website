@@ -9,7 +9,7 @@ import './components/talk-card.js';
 import { talks } from '../data/talks.js';
 
 import { renderCards } from './render.js';
-import { applyLang, initLangToggle } from './i18n.js';
+import { applyLang, initLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initNav } from './nav.js';
 
@@ -18,7 +18,7 @@ function init() {
   renderCards('talksGrid', 'talk-card', talks);
 
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   initThemeToggle();
   initLangToggle();

@@ -6,7 +6,7 @@
  * inline status, so the visitor stays on the page. With JS disabled the form
  * still posts normally and Formspree renders its own confirmation page.
  */
-import { applyLang, initLangToggle, t } from './i18n.js';
+import { applyLang, initLang, initLangToggle, t } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initNav } from './nav.js';
 
@@ -49,7 +49,7 @@ function initContactForm() {
 
 function init() {
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   initThemeToggle();
   initLangToggle();

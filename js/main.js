@@ -27,7 +27,7 @@ import { renderCards } from './render.js';
 import { initNav } from './nav.js';
 
 /** Home grids preview only the first few items; the rest live on /talks/, etc. */
-const PREVIEW_COUNT = 4;
+const PREVIEW_COUNT = 3;
 
 /** Home projects list previews only the first few; the rest live on /projects/. */
 const PROJECTS_PREVIEW = 3;

@@ -10,7 +10,7 @@ import './components/collab-card.js';
 import { collabs } from '../data/collabs.js';
 
 import { renderCards } from './render.js';
-import { applyLang, initLangToggle } from './i18n.js';
+import { applyLang, initLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initNav } from './nav.js';
 
@@ -19,7 +19,7 @@ function init() {
   renderCards('collabsGrid', 'collab-card', collabs);
 
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   initThemeToggle();
   initLangToggle();

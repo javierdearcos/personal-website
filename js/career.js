@@ -9,7 +9,7 @@ import './components/career-card.js';
 import { career } from '../data/career.js';
 
 import { renderCards } from './render.js';
-import { applyLang, initLangToggle } from './i18n.js';
+import { applyLang, initLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initNav } from './nav.js';
 
@@ -18,7 +18,7 @@ function init() {
   renderCards('careerTimeline', 'career-card', career);
 
   initTheme();
-  applyLang('es');
+  applyLang(initLang());
 
   initThemeToggle();
   initLangToggle();

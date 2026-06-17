@@ -39,16 +39,16 @@ export const collabs = [
     title: 'Cómo cuidar del talento técnico CON SENTIDIÑO',
     url: 'https://youtu.be/hrPzZly7RZY',
     source: 'Manfred VideoPodcast, 2023',
+  },  
+  {
+    icon: '🎧', iconLabel: 'Fireside Chat', langTag: '🇬🇧 EN',
+    title: 'Fireside Chat',
+    source: 'Getmimo, 2023',
   },
   {
     icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
     title: '¿Cómo me enfrento a una entrevista técnica siendo junior?',
     url: 'https://www.youtube.com/live/3XXncJBkQdM',
     source: 'Teach[t3ch], 2022',
-  },
-  {
-    icon: '🎧', iconLabel: 'Fireside Chat', langTag: '🇬🇧 EN',
-    title: 'Fireside Chat',
-    source: 'Getmimo, 2023',
   },
 ];

@@ -15,3 +15,16 @@ footer blockquote {
   color: var(--muted);
 }
 footer blockquote cite { color: var(--accent); }
+
+/* Unified footer: site navigation links + copyright */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem 2rem;
+  margin: 0 auto 1.25rem;
+  max-width: 680px;
+}
+.footer-nav a { color: var(--muted); }
+.footer-nav a:hover { color: var(--accent); text-decoration: none; }
+.footer-copy { margin: 0; }

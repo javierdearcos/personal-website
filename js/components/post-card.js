@@ -21,7 +21,7 @@ class PostCard extends HTMLElement {
     this.innerHTML = `
       <div class="post-icon" aria-hidden="true">${icon}</div>
       <span class="tag">${tag}</span>
-      <h3 class="post-title"><a href="${url}" target="_blank" rel="noopener">${title}</a></h3>
+      <h3 class="post-title"><a href="${url}">${title}</a></h3>
       <p class="post-desc">${desc}</p>`;
   }
 }

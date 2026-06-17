@@ -24,19 +24,14 @@ import { technologies } from '../data/tech.js';
 import { applyLang, initLangToggle } from './i18n.js';
 import { initTheme, initThemeToggle } from './theme.js';
 import { initCarousels } from './carousel.js';
+import { renderCards } from './render.js';
+import { initNav } from './nav.js';
 
-/** Create `tag` elements from `items`, assign `.data`, and append to `mountId`. */
-function renderCards(mountId, tag, items) {
-  const mount = document.getElementById(mountId);
-  if (!mount) return;
-  const frag = document.createDocumentFragment();
-  for (const item of items) {
-    const el = document.createElement(tag);
-    el.data = item;
-    frag.appendChild(el);
-  }
-  mount.appendChild(frag);
-}
+/** Home carousels preview only the first few items; the rest live on /talks/. */
+const CAROUSEL_PREVIEW = 4;
+
+/** Home projects list previews only the first few; the rest live on /projects/. */
+const PROJECTS_PREVIEW = 3;
 
 /** Render the plain tech badge list (no custom element needed). */
 function renderTech(mountId, items) {
@@ -55,10 +50,10 @@ function renderTech(mountId, items) {
 
 function render() {
   renderCards('focusGrid', 'focus-card', focusAreas);
-  renderCards('talksCarousel', 'talk-card', talks);
-  renderCards('collabCarousel', 'collab-card', collabs);
+  renderCards('talksCarousel', 'talk-card', talks.slice(0, CAROUSEL_PREVIEW));
+  renderCards('collabCarousel', 'collab-card', collabs.slice(0, CAROUSEL_PREVIEW));
   renderCards('postsCarousel', 'post-card', posts);
-  renderCards('projectList', 'project-card', projects);
+  renderCards('projectList', 'project-card', projects.slice(0, PROJECTS_PREVIEW));
   renderTech('techGrid', technologies);
 }
 
@@ -73,6 +68,7 @@ function init() {
   initThemeToggle();
   initLangToggle();
   initCarousels();
+  initNav();
 }
 
 if (document.readyState === 'loading') {

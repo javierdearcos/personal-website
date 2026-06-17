@@ -37,19 +37,20 @@
 
   <!-- NAV -->
   <nav class="nav" aria-label="Navegación principal">
-    <div class="nav-logo">&gt;_ javierdearcos</div>
-    <ul class="nav-links" role="list">
-      <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
-      <li><a href="#now" data-i18n="nav.now">Ahora</a></li>
-      <li><a href="#talks" data-i18n="nav.talks">Charlas</a></li>
-      <li><a href="#collab" data-i18n="nav.collab">Colaboraciones</a></li>
-      <li><a href="#posts" data-i18n="nav.posts">Posts</a></li>
-      <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
-      <li><a href="#connect" data-i18n="nav.connect">Contacto</a></li>
+    <a class="nav-logo" href="/">&gt;_ javierdearcos</a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/" aria-current="page" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="/career/" data-i18n="nav.career">Trayectoria</a></li>
+      <li><a href="/talks/" data-i18n="nav.talks">Charlas</a></li>
+      <li><a href="/collabs/" data-i18n="nav.collabs">Colaboraciones</a></li>
+      <li><a href="/projects/" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="/blog/" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="/contact/" data-i18n="nav.contact">Contacto</a></li>
     </ul>
     <div class="nav-controls">
       <button class="btn-icon btn-lang" id="langToggle" type="button" aria-label="Switch language">EN</button>
       <button class="btn-icon" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
+      <button class="btn-icon nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </nav>
 
@@ -65,7 +66,7 @@
           <p class="hero-desc" data-i18n="hero.desc">Apasionado por construir <strong>equipos de alto rendimiento</strong> donde las personas pueden dar lo mejor de sí. Creo que el gran software es primero un problema de personas, y luego técnico.</p>
           <div class="hero-cta">
             <a href="#connect" class="btn btn-primary" data-i18n="hero.cta1">Hablemos</a>
-            <a href="https://javierdearcos.com" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero.cta2">Leer el blog ↗</a>
+            <a href="/blog/" class="btn btn-outline" data-i18n="hero.cta2">Leer el blog →</a>
           </div>
         </div>
         <div class="hero-img-wrap">
@@ -88,9 +89,16 @@
           <li><span class="emoji" aria-hidden="true">🏢</span><span data-i18n="now.1">Trabajando como <strong>Engineering Manager</strong></span></li>
           <li><span class="emoji" aria-hidden="true">🧠</span><span data-i18n="now.2">Estudiando un <strong>Grado en Psicología</strong> — porque la causa raíz de la mayoría de los problemas técnicos son las personas</span></li>
           <li><span class="emoji" aria-hidden="true">🎙️</span><span data-i18n="now.3">Participando en eventos como <strong>speaker y colaborador</strong> en podcasts para seguir aprendiendo y compartiendo</span></li>
-          <li><span class="emoji" aria-hidden="true">✍️</span><span data-i18n="now.4">Escribiendo sobre ingeniería, liderazgo y carrera en <a href="https://javierdearcos.com" target="_blank" rel="noopener">javierdearcos.com</a></span></li>
+          <li><span class="emoji" aria-hidden="true">✍️</span><span data-i18n="now.4">Escribiendo sobre ingeniería, liderazgo y carrera en el <a href="/blog/">blog</a></span></li>
           <li><span class="emoji" aria-hidden="true">📚</span><span data-i18n="now.5">Explorando: <strong>Kotlin · GIS · Equipos efectivos · IA</strong></span></li>
         </ul>
+      </section>
+
+            <!-- TECH -->
+      <section aria-labelledby="tech-title">
+        <p class="section-label" data-i18n="section.tech.label">Stack y herramientas</p>
+        <h2 class="section-title" id="tech-title" data-i18n="section.tech.title">Tecnologías</h2>
+        <div class="tech-grid" id="techGrid" role="list" aria-label="Tecnologías"></div>
       </section>
 
       <!-- TALKS -->
@@ -104,6 +112,9 @@
             <button class="carousel-btn" type="button" data-carousel-target="talksCarousel" data-carousel-dir="1" aria-label="Siguiente">›</button>
           </div>
         </div>
+        <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--muted)">
+          <a href="/talks/" data-i18n="talks.more">Ver todas las charlas →</a>
+        </p>
       </section>
 
       <!-- COLLABORATIONS -->
@@ -117,6 +128,9 @@
             <button class="carousel-btn" type="button" data-carousel-target="collabCarousel" data-carousel-dir="1" aria-label="Siguiente">›</button>
           </div>
         </div>
+        <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--muted)">
+          <a href="/collabs/" data-i18n="collab.more">Ver todas las colaboraciones →</a>
+        </p>
       </section>
 
       <!-- POSTS -->
@@ -131,7 +145,7 @@
           </div>
         </div>
         <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--muted)">
-          <span data-i18n="posts.more">Más artículos en</span> <a href="https://javierdearcos.com" target="_blank" rel="noopener">javierdearcos.com ↗</a>
+          <a href="/blog/" data-i18n="posts.more">Ver todos los posts en el blog →</a>
         </p>
       </section>
 
@@ -140,13 +154,9 @@
         <p class="section-label" data-i18n="section.projects.label">Código y comunidad</p>
         <h2 class="section-title" id="projects-title" data-i18n="section.projects.title">Proyectos</h2>
         <div class="project-list" id="projectList"></div>
-      </section>
-
-      <!-- TECH -->
-      <section aria-labelledby="tech-title">
-        <p class="section-label" data-i18n="section.tech.label">Stack y herramientas</p>
-        <h2 class="section-title" id="tech-title" data-i18n="section.tech.title">Tecnologías</h2>
-        <div class="tech-grid" id="techGrid" role="list" aria-label="Tecnologías"></div>
+        <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--muted)">
+          <a href="/projects/" data-i18n="projects.more">Ver todos los proyectos →</a>
+        </p>
       </section>
 
       <!-- CONNECT -->
@@ -162,7 +172,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.204-.659-.299-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
             Bluesky
           </a>
-          <a href="https://javierdearcos.com" target="_blank" rel="noopener" class="social-link">
+          <a href="/blog/" class="social-link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             Blog
           </a>
@@ -186,7 +196,7 @@
         "For each desired change, make the change easy (warning: this may be hard), then make the easy change."
         <br><cite>— Kent Beck</cite>
       </blockquote>
-      <p data-i18n="footer">© 2026 Javier de Arcos · Hecho con HTML, CSS y ganas</p>
+      <p data-i18n="footer">© 2026 Javier de Arcos · Hecho con HTML, CSS e IA</p>
     </div>
   </footer>
 </body>

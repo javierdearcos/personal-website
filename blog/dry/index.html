@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRY no es (sólo) lo que piensas — Javier de Arcos</title>
+  <meta name="description" content="Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone" />
+  <meta name="author" content="Javier de Arcos" />
+  <meta property="og:title" content="DRY no es (sólo) lo que piensas" />
+  <meta property="og:description" content="Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://javierdearcos.com/blog/dry/dry.jpg" />
+  <meta property="article:published_time" content="2021-10-14T22:00:00.000Z" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://javierdearcos.com/blog/dry/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  <script type="module" src="/js/blog.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "DRY no es (sólo) lo que piensas",
+    "description": "Reflexión de la simplificación habitual del principio de desarrollo de software DRY y todo lo que realmente supone",
+    "datePublished": "2021-10-14T22:00:00.000Z",
+    "author": { "@type": "Person", "name": "Javier de Arcos", "url": "https://javierdearcos.com" },
+    "url": "https://javierdearcos.com/blog/dry/"
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav-logo" href="/">&gt;_ javierdearcos</a>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/career/">Trayectoria</a></li>
+      <li><a href="/talks/">Charlas</a></li>
+      <li><a href="/collabs/">Colaboraciones</a></li>
+      <li><a href="/projects/">Proyectos</a></li>
+      <li><a href="/blog/" aria-current="page">Blog</a></li>
+      <li><a href="/contact/">Contacto</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="btn-icon" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
+      <button class="btn-icon nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+      <article class="post">
+        <header class="post-header">
+          <a class="post-back" href="/blog/">← Todos los posts</a>
+          <div class="post-meta">
+            <span class="tag">💻 desarrollo</span>
+            <time datetime="2021-10-14">14 de octubre de 2021</time>
+            <span class="post-read">· 8 mins. de lectura</span>
+          </div>
+          <h1 class="post-title-full">DRY no es (sólo) lo que piensas</h1>
+        </header>
+        <div class="post-body">
+<figure><picture><img loading="lazy" src="dry.jpg" alt="Tierra seca agrietada formando patrones. Foto de Micaela Parente en Unsplash"></picture></figure><p>Seguramente DRY fuera una de los primeros principios de desarrollo de software de los que oíste hablar. Imagino que mientras programabas al lado de algún compañero copiaste y pegaste un bloque de código y éste te dijo algo así como: “¡Oye! Eso va en contra de DRY. No te repitas. Don’t Repeat Yourself!”. O viste un artículo en internet y, claro, con ese acrónimo tan pegadizo se te quedó grabado en el cerebro.</p><p>Y así venía a tu mente cada vez que veías el mismo código varias veces o tenías la tentación de copiar y pegar. Y así lo transmitiste siempre que viste una ocasión.</p><p>Así al menos fue para muchos de nosotros. Y al empezar a programar es genial tener reglas tan claras de lo que está bien y está mal, de lo que se debe y no se debe hacer. Pero según ganas conocimientos y experiencia te das cuenta de que nada es universal, correcto o incorrecto, blanco o negro. Que las líneas son difusas y que nada es tan fácil como parece, incluyendo DRY.</p><p>Hoy quiero escribir de por qué creo que <strong>DRY es mucho más de lo que habitualmente se piensa</strong>, y de que no trata de ti, no trata sobre repetir, ni siquiera se trata de código, y no siempre es “no”.</p><h2 id="Un-momento-¿que-es-DRY"><a href="#Un-momento-¿que-es-DRY" class="headerlink" title="Un momento, ¿qué es DRY?"></a>Un momento, ¿qué es DRY?</h2><p>DRY viene del acrónimo “Don’t Repeat Yourself” y es uno de los principios de desarrollo más extendidos. Fue acuñado por <em>Andy Hunt</em> y <em>Dave Thomas</em> en su libro <em>The Pragmatic Programmer</em>, uno de los libros que siempre recomiendo leer a todo desarrollador.</p><p>DRY surge de los peligros de duplicar el conocimiento, lo que implica que ante un cambio debemos acordarnos de todos los lugares donde duplicamos ese conocimiento o caeremos en inconsistencias en nuestro sistema. El principio completo es:</p><blockquote><p>Toda pieza de conocimiento debe tener una única, precisa y completa representación dentro de un sistema.</p></blockquote><p>Si nos quedamos con el principio completo tendremos una idea mucho más clara de lo que representa DRY, pero si tan sólo nos quedamos con el acrónimo nos perderemos muchos matices que nos harán simplificar en exceso de que trata.</p><h2 id="DRY-no-trata-sobre-ti"><a href="#DRY-no-trata-sobre-ti" class="headerlink" title="DRY no trata sobre ti"></a>DRY no trata sobre ti</h2><p>Cuando trabajas solo todo resulta bastante sencillo. Comienzas un proyecto y lo vas haciendo crecer. Así es fácil darse cuenta cuando, de repente, tienes la misma necesidad que hace un rato o unos días y necesitas usar el mismo código. Entonces te dices a ti mismo: “Recuerda. DRY. Don’t Repeat Yourself”. Así que abstraes la lógica, refactorizas para llamar al mismo código desde los diferentes puntos tu código y sigues tu proyecto con la satisfacción del que consigue hacer las cosas bien hechas.</p><p>Pero cuando te incorporas a un equipo te das cuenta que la cosa se complica. Ya no sirve con que estés atento a no repetir el código que hiciste hace unos días, sino que también debes tener en cuenta el código de tus compañeros. Y tus compañeros deben tener en cuenta el código que tú estás haciendo. De nada sirve que cada miembro del equipo no se repita a sí mismo, si todos acaban repitiendo lo mismo entre ellos.</p><p>Y es que como tan bien dice esa frase hecha en inglés: <em>There’s no I in TEAM</em>. Y cuando sois muchos programando, el problema deja de ser repetir y empieza a ser trabajar en equipo.</p><p>Por ello es importante saber <strong>comunicar</strong> qué estás haciendo, qué necesitas, y que tus compañeros hagan lo mismo. Saber <strong>compartir el conocimiento</strong> importante para que todo el equipo sea consciente de él. Y <strong>documentar</strong> de forma efectiva para que el conocimiento llegué a todos, incluso a los compañeros que aún no están trabajando contigo y que puede que ni siquiera te lleguen a conocer.</p><p>También es importante tener en cuenta el <strong>Principle of Least Astonishment</strong>, algo así como el principio de la mínima sorpresa, para que cuando seas tú el que desarrolles algo que creas que puede ser útil para los demás, lo situes en el lugar dónde tus compañeros esperen encontrarlo y se comporte exactamente como ellos esperan.</p><h2 id="DRY-no-trata-sobre-repetir"><a href="#DRY-no-trata-sobre-repetir" class="headerlink" title="DRY no trata sobre repetir"></a>DRY no trata sobre repetir</h2><p>Lo mismo pasa cuando llegas a un proyecto grande, con miles de líneas de código y muchos años en desarrollo. En tu pequeño proyecto era fácil darte cuenta de las repeticiones pero… ¿cómo sabes si estás repitiendo algo si no conoces el proyecto en el que trabajas?</p><p>Para saberlo necesitas <strong>conocer el código fuente del proyecto y las convenciones</strong> que se han usado en él. Cómo se estructura, qué módulos tiene, dónde se encuentran las funciones de utilidad, qué convención de nombrado usan… para así poder buscar lo que necesitas antes de programarlo.</p><p>Y debes saber bien qué es lo que estás buscando. Aquí no sólo sirve el conocimiento específico de tu proyecto, sino el conocimiento general y profundo sobre desarrollo de software. ¿Lo que estás buscando tiene un nombre concreto que corresponde a un patrón de diseño? ¿Un tipo de algoritmo? ¿Una estructura de datos? ¿Un concepto extendido en programación? Puesto que para buscar algo tienes que saber <strong>ponerle nombre</strong>.</p><p>Y por último, también debes saber cómo <strong>buscar</strong>. Pues cuando trates con proyectos grandes, de nada sirve saber qué buscar si tienes que hacerlo manualmente entre miles de ficheros. Por ello también es importante dominar las herramientas de búsqueda de tu IDE o comandos de terminal como <em>find</em> y <em>grep</em> para encontrar aquello que buscas.</p><h2 id="DRY-no-trata-sobre-repeticiones"><a href="#DRY-no-trata-sobre-repeticiones" class="headerlink" title="DRY no trata sobre repeticiones"></a>DRY no trata sobre repeticiones</h2><p>Si esto te sonaba algo confuso, aquí se complica aún más. Porque realmente DRY no trata sobre repeticiones, sino sobre <strong>patrones y abstracciones</strong>.</p><p>Puede haber código repetido que no incumpla DRY y código que a simple vista parezca muy diferente que esté incumpliendo este principio.</p><p>Habrá casos donde encontremos código que es igual de una manera casual, pero que está claro que va a evolucionar de forma diferente. Aquí sería un error extraer el código común. O casos donde el código parezca diferente, por como está nombrado y estructurado, pero que esconda el mismo patrón. En este caso deberemos abstraerlo. Y es que la clave de DRY es <strong>identificar un patrón y generalizarlo con el nivel de abstracción idóneo</strong> para que sea útil para todos nuestros casos. Ni uno más, ni uno menos.</p><p>Aquí se crean diferentes líneas de pensamiento a DRY, como WET (Write Everything Twice) o variantes que nos dicen que debemos esperar a repetir el mismo código N veces antes de abstraerlo para evitar precipitarnos. Personalmente no lo comparto ya que lo veo demasiado rígido. Habrá veces que desde un primer momento se tenga claro cuál es el patrón y podamos abstraerlo. Y otras que aún repetido 5 veces no terminemos de ver claro si se trata del mismo patrón o cuál es el nivel correcto de abstracción y sea preferible esperar a tener más conocimiento.</p><p>Lo que es importante es darse cuenta de <strong>los peligros de la abstracción prematura</strong> y que muchas veces duplicar código es preferible antes que crear la abstracción incorrecta. Sandi Metz lo explica mucho mejor que yo en este <a target="_blank" rel="noopener" href="https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction">artículo</a> que os recomiendo leer.</p><h2 id="DRY-no-trata-sobre-codigo"><a href="#DRY-no-trata-sobre-codigo" class="headerlink" title="DRY no trata sobre código"></a>DRY no trata sobre código</h2><p>Aunque cuando hablamos de DRY solemos hablar sobre código, no sólo aplica al código, como tan bien expresaron <em>Andy Hunt</em> y <em>Dave Thomas</em> , si no que lo tendremos que tener en cuenta para <strong>todo el conocimiento que tengamos representado en nuestro sistema</strong>, ya sea código, configuración, documentación…</p><p>Debemos tener este principio en cuenta y tomar las medidas necesarias para evitar que el conocimiento se duplique y podamos caer en contradicciones entre diferentes fuentes o partes del sistema.</p><h2 id="DRY-no-siempre-es-no"><a href="#DRY-no-siempre-es-no" class="headerlink" title="DRY no siempre es no"></a>DRY no siempre es no</h2><p>Por último, aún habiendo encontrado la repetición, teniendo claro el patrón y el nivel de abstracción correcto, puede que a veces entren en juego otros factores que nos indiquen que no es una buena idea aplicar DRY.</p><p>Por ejemplo, cada vez que extraes un código común estás creando una dependencia entre distintas partes de tu sistema y&#x2F;o entre distintos equipos. Por ello habrá que analizar si esta dependencia tiene sentido y merece la pena con los posibles problemas que puede conllevar.</p><p>También es probable que al extraer este código común debas hacerlo público en forma de API para que sea usado por diferentes módulos y&#x2F;o equipos. Aquí estarás atado a mantener el contrato de tu API para no romper el código de otros equipos o clientes que puedan estar usándolo, y por ello debes estar muy convencido de que es la abstracción correcta, o sino será preferible esperar hasta estar más seguro como hemos comentado antes.</p><p>Por estas razones y otras fuera del código puede que no siempre sea una buena idea no duplicar código.</p><h2 id="Mas-alla-de-DRY"><a href="#Mas-alla-de-DRY" class="headerlink" title="Más allá de DRY"></a>Más allá de DRY</h2><p>Con este artículo quería mencionar habilidades y principios relacionados con DRY que creo que muchas veces pasamos por alto.</p><p>Pero más allá de DRY, creo que es necesario seguir remarcando que <strong>no existe un principio o patrón universal que podamos aplicar siempre</strong>, por muy sencillo o lógico que parezca. Siempre habrá ventajas y desventajas según el contexto en el que estemos y nuestro deber es hacer análisis y balance para aplicar la solución adecuada en cada caso.</p><p>Espero que te haya resultado interesante y, si te apetece, ¡seguimos la conversación por las redes!</p>
+        </div>
+      </article>
+
+      <nav class="post-pager" aria-label="Más posts">
+        <a class="pager-link pager-next" href="/blog/the-average-life/"><span class="pager-dir">← Más reciente</span><span class="pager-ttl">Oda a la vida media</span></a>
+        <a class="pager-link pager-prev" href="/blog/wonderland/"><span class="pager-dir">Más antiguo →</span><span class="pager-ttl">Despertando del País de las Maravillas</span></a>
+      </nav>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Javier de Arcos · <a href="/">Inicio</a> · <a href="/blog/">Blog</a></p>
+    </div>
+  </footer>
+</body>
+</html>

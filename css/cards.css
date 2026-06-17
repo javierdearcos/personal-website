@@ -28,6 +28,16 @@
 }
 .link-pill:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
+/* ─── CARD GRID (subpages: /talks/) ──────────────────────────── */
+/* In a grid the cards' carousel `flex: 0 0 …px` basis is inert, so they
+   stretch to fill each track instead of keeping a fixed width. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
 /* ─── TALK CARD ──────────────────────────────────────────────── */
 .talk-card {
   flex: 0 0 300px;

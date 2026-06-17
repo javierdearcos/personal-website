@@ -1,0 +1,86 @@
+/* ════════════════════════════════════════════════════════════════
+   CAREER — vertical timeline of professional roles.
+   Loaded alongside main.css and blog.css on /career/. Reuses the global
+   tokens, nav, buttons and footer; adds only the timeline layout.
+   ════════════════════════════════════════════════════════════════ */
+
+.career-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0 0 4rem 0;
+}
+/* The vertical line runs through the markers' centre (left + marker radius). */
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0;
+  left: 6px;
+  width: 2px;
+  background: var(--border);
+}
+
+.career-card {
+  position: relative;
+  display: block;
+  padding-left: 2rem;
+}
+
+.career-marker {
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.career-role {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.career-company {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent);
+  margin: 0.25rem 0 0.85rem;
+}
+.career-summary {
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+.career-bullets {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 65ch;
+}
+.career-bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.career-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .career-timeline { gap: 2rem; }
+  .career-card { padding-left: 1.6rem; }
+}

@@ -22,6 +22,8 @@
 }
 .nav-links {
   display: flex;
+  flex: 1;
+  justify-content: center;
   gap: 0.25rem;
   list-style: none;
   align-items: center;
@@ -58,4 +60,35 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
+}
+
+/* ─── MOBILE HAMBURGER ───────────────────────────────────────── */
+/* The toggle is hidden on desktop; the links sit in a normal row. Below the
+   breakpoint the links collapse into a dropdown panel toggled by the button. */
+.nav-toggle { display: none; }
+
+@media (max-width: 820px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.15rem;
+    padding: 0.75rem clamp(1rem, 5vw, 3rem);
+    background: color-mix(in srgb, var(--bg) 97%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a { display: block; padding: 0.6rem 0.5rem; font-size: 0.95rem; }
 }

@@ -1,0 +1,49 @@
+/* ════════════════════════════════════════════════════════════════
+   CONTACT — form + alternative contact options.
+   Loaded alongside main.css (and blog.css for the subpage chrome) on
+   the /contact/ page only.
+   ════════════════════════════════════════════════════════════════ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  max-width: 560px;
+}
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-field label { font-size: 0.8rem; font-weight: 600; color: var(--muted); }
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text);
+  transition: border-color var(--transition);
+}
+.form-field input:focus,
+.form-field textarea:focus { outline: none; border-color: var(--accent); }
+.form-field textarea { resize: vertical; min-height: 140px; }
+
+/* Honeypot — off-screen field that only bots fill in. */
+.form-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.form-status { font-size: 0.88rem; color: var(--muted); }
+.form-status[data-state="success"] { color: var(--accent); }
+.form-status[data-state="error"] { color: var(--accent2); }
+
+/* Alternative options (social links) below the form. */
+.contact-alt { margin-top: 3.5rem; }
+.contact-alt-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}

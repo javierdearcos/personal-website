@@ -13,7 +13,7 @@ export const collabs = [
   {
     icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
     title: 'De Software Engineer a Manager',
-    url: 'https://youtu.be/BaS7J5mX2oc',
+    url: 'https://www.youtube.com/live/nS9ucyTmj2A',
     source: 'LambdaLoopers, 2025',
   },
   {
@@ -33,6 +33,11 @@ export const collabs = [
     title: 'Liderazgo técnico y humano',
     url: 'https://open.spotify.com/episode/3bS2FTL8lCPTaHjljTbCdy',
     source: 'Hablando con Tech Leaders, 2024',
+  },  
+  {
+    icon: '🎧', iconLabel: 'Fireside Chat', langTag: '🇬🇧 EN',
+    title: 'Fireside Chat',
+    source: 'Getmimo, 2023',
   },
   {
     icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
@@ -41,9 +46,9 @@ export const collabs = [
     source: 'Manfred VideoPodcast, 2023',
   },  
   {
-    icon: '🎧', iconLabel: 'Fireside Chat', langTag: '🇬🇧 EN',
-    title: 'Fireside Chat',
-    source: 'Getmimo, 2023',
+    icon: '📃', iconLabel: 'Newsletter Collaboration', langTag: '🇪🇸 ES',
+    title: 'Despertando en el País de las Maravillas',
+    source: 'Mucho Fi y poco RE, Álvaro Alegría Newsletter, 2022',
   },
   {
     icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',

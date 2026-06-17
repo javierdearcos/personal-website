@@ -49,6 +49,14 @@ export const talks = [
     video: 'https://youtu.be/H4DanvLs3EE',
   },
   {
+    langTag: '🇪🇸 ES',
+    year: '2021',
+    title: 'APIs, este es el camino',
+    event: 'Liferay User Group Meetup, 2021',
+    slides: 'https://drive.google.com/file/d/1jSPGZWUsOyVb915dMsPF63s82irrbKSX/view?usp=sharing',
+    video: 'https://www.youtube.com/live/7C8VfXyCeRQ?si=OrG2oALuEtiyiRjb',
+  },
+  {
     langTag: '🇬🇧 EN',
     year: '2021',
     title: 'APIs, this is the way',
@@ -57,10 +65,32 @@ export const talks = [
     video: 'https://www.youtube.com/live/Rai2cugsCcY',
   },
   {
+    langTag: '🇬🇧 EN',
+    year: '2021',
+    title: 'Building a SPA using Liferay\'s Headless APIs',
+    event: 'Liferay Devcon, 2021',
+    slides: "https://github.com/javierdearcos/Liferay-Travels-Backend/blob/master/DEVCON%202021%20-%20Building%20a%20SPA%20using%20Liferay's%20Headless%20APIs.pdf",
+  },
+  {
     langTag: '🇪🇸 ES',
     year: '2021',
     title: 'Sleep Well Driven Development',
     event: 'Licorca Conf 2021',
     slides: 'https://drive.google.com/file/d/1K2IYypz3PMPcEVCyxBdjewtUfwmJy41T/view?usp=sharing',
+  },
+  {
+    langTag: '🇪🇸 ES',
+    year: '2020',
+    title: 'Mutation Testing: Who watches the watchmen',
+    event: 'Selected for the cancelled T3chfest 2020',
+    slides: 'https://drive.google.com/file/d/1VENjlH8bQ6dGwwDBDEDCpm-E_nvHmdVO/view?usp=sharing',
+  },
+  {
+    langTag: '🇪🇸 ES',
+    year: '2019',
+    title: 'Eficiencia operativa y reduccion de costes con IOT',
+    event: 'Monolitic IOT Workshop, 2019',
+    slides: 'https://drive.google.com/file/d/1GVwr0AjjNsbew5kPUALypLtdVLV0Jr6W/view?usp=sharing',
+    video: 'https://drive.google.com/file/d/1hIHtSKtBm838dfjIMtHiODsYmqeAftLY/view?usp=sharing',
   },
 ];

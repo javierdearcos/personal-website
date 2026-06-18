@@ -95,7 +95,7 @@ const translations = {
     'page.career.title': 'Trayectoria',
     'page.career.intro': 'Mi recorrido profesional: de desarrollador de software a Engineering Manager, construyendo equipos de alto rendimiento y entregando producto.',
     'career.technosylva.role': 'Engineering Manager',
-    'career.technosylva.period': 'Jul 2025 — Actualidad',
+    'career.technosylva.period': 'Jul 2025 — Jun 2026',
     'career.technosylva.summary': 'Lideré la recuperación de un producto estratégico clave, reconstruido como una oferta SaaS escalable (.Net, Vue, Azure): definí la estrategia y el roadmap por fases, restauré la confianza de los stakeholders y aseguré la incorporación de los primeros clientes a tiempo.',
     'career.technosylva.b1': 'Establecí un modelo operativo ágil con iteraciones de 2 semanas centrado en resultados medibles.',
     'career.technosylva.b2': 'Escalé el equipo de 8 a 16 ingenieros, estandarizando la contratación y optimizando el onboarding.',

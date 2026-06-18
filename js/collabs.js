@@ -17,7 +17,6 @@ import { initNav } from './nav.js';
 function init() {
   // Cards first, so applyLang() also reaches their data-i18n labels.
   renderCards('collabsGrid', 'collab-card', collabs);
-
   initTheme();
   applyLang(initLang());
 

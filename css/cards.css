@@ -77,27 +77,6 @@
   margin-top: auto;
 }
 
-/* ─── COLLAB CARD ────────────────────────────────────────────── */
-.collab-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.collab-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.collab-type { font-size: 1.2rem; }
-.collab-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.35;
-  flex: 1;
-}
-.collab-source { font-size: 0.8rem; color: var(--muted); }
-
 /* ─── POST CARD ──────────────────────────────────────────────── */
 .post-card {
   background: var(--surface);

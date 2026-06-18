@@ -1,59 +1,70 @@
 /**
  * Podcasts & interviews shown in the "Colaboraciones / Collaborations" grid.
- * `icon` is the media glyph, `iconLabel` its accessible name.
- * `url` is optional — when absent the title renders as plain text.
+ * `icon` is the media glyph, if empty is calculated from the links provided (audio, video, url)
+ * `video`, `audio`, `url` are optional — are used to include media content.
  */
 export const collabs = [
   {
-    icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2025',
     title: 'Burnout en tech',
-    url: 'https://youtu.be/HzSKaYxS4n0',
-    source: 'Manfred VideoPodcast, 2025',
+    event: 'Manfred VideoPodcast',
+    video: 'https://youtu.be/HzSKaYxS4n0',
   },
   {
-    icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
-    title: 'De Software Engineer a Manager',
-    url: 'https://www.youtube.com/live/nS9ucyTmj2A',
-    source: 'LambdaLoopers, 2025',
+    langTag: '🇪🇸 ES',
+    year: '2025',
+    title: 'De Software Engineer a Manager',    
+    event: 'LambdaLoopers',
+    video: 'https://www.youtube.com/live/nS9ucyTmj2A',
   },
   {
-    icon: '🎧', iconLabel: 'Podcast', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2025',
     title: 'Liderazgo, comunicación y gestión',
-    url: 'https://open.spotify.com/episode/4BPMuknnkaL4fPGBnDLssU',
-    source: 'Rodobo Podcast, 2025',
+    event: 'Rodobo Podcast',
+    audio: 'https://open.spotify.com/episode/4BPMuknnkaL4fPGBnDLssU',
   },
   {
-    icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2024',
     title: 'Charlando con Engineering Managers',
-    url: 'https://youtu.be/BaS7J5mX2oc',
-    source: 'Manfred VideoPodcast, 2024',
+    event: 'Manfred VideoPodcast',
+    video: 'https://youtu.be/BaS7J5mX2oc',
   },
   {
-    icon: '🎧', iconLabel: 'Podcast', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2024',
     title: 'Liderazgo técnico y humano',
-    url: 'https://open.spotify.com/episode/3bS2FTL8lCPTaHjljTbCdy',
-    source: 'Hablando con Tech Leaders, 2024',
+    event: 'Hablando con Tech Leaders',
+    audio: 'https://open.spotify.com/episode/3bS2FTL8lCPTaHjljTbCdy',
   },  
   {
-    icon: '🎧', iconLabel: 'Fireside Chat', langTag: '🇬🇧 EN',
+    icon: '🎧',
+    langTag: '🇬🇧 EN',
+    year: '2023',
     title: 'Fireside Chat',
-    source: 'Getmimo, 2023',
+    event: 'Getmimo',
   },
   {
-    icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2023',
     title: 'Cómo cuidar del talento técnico CON SENTIDIÑO',
-    url: 'https://youtu.be/hrPzZly7RZY',
-    source: 'Manfred VideoPodcast, 2023',
+    event: 'Manfred VideoPodcast',
+    video: 'https://youtu.be/hrPzZly7RZY',
   },  
   {
-    icon: '📃', iconLabel: 'Newsletter Collaboration', langTag: '🇪🇸 ES',
+    icon: '📃',
+    langTag: '🇪🇸 ES',
+    year: '2022',
+    event: 'Mucho Fi y poco RE, Álvaro Alegría Newsletter',
     title: 'Despertando en el País de las Maravillas',
-    source: 'Mucho Fi y poco RE, Álvaro Alegría Newsletter, 2022',
   },
   {
-    icon: '🎥', iconLabel: 'Video', langTag: '🇪🇸 ES',
+    langTag: '🇪🇸 ES',
+    year: '2022',
+    event: 'Teach[t3ch] Winter Sessions',
     title: '¿Cómo me enfrento a una entrevista técnica siendo junior?',
-    url: 'https://www.youtube.com/live/3XXncJBkQdM',
-    source: 'Teach[t3ch], 2022',
+    video: 'https://www.youtube.com/live/3XXncJBkQdM',
   },
 ];

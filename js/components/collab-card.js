@@ -16,18 +16,25 @@ class CollabCard extends HTMLElement {
   }
 
   render() {
-    const { icon, iconLabel, langTag, title, source, url } = this._data;
-    const heading = url
-      ? `<a href="${url}" target="_blank" rel="noopener">${title}</a>`
-      : title;
+    const { langTag, year, icon, title, event, slides, video, audio, url } = this._data;
+    const links = [
+      slides && `<a href="${slides}" target="_blank" rel="noopener" class="link-pill">🖥️ <span data-i18n="link.slides">Slides</span></a>`,
+      video && `<a href="${video}" target="_blank" rel="noopener" class="link-pill">🎬 <span data-i18n="link.video">Video</span></a>`,
+      audio && `<a href="${audio}" target="_blank" rel="noopener" class="link-pill">🎧 <span data-i18n="link.audio">Audio</span></a>`,
+      url && `<a href="${url}" target="_blank" rel="noopener" class="link-pill">🔗 <span data-i18n="link.url">URL</span></a>`,
+    ].filter(Boolean).join('');
 
-    this.className = 'collab-card';
+    const titleIcon = icon || (video ? '🎥' : audio ? '🎧' : url ? '🔗' : '');
+
+    this.className = 'talk-card';
     this.setAttribute('role', 'listitem');
     this.innerHTML = `
-      <div class="collab-type" aria-label="${iconLabel}">${icon}</div>
-      <span class="tag">${langTag}</span>
-      <h3 class="collab-title">${heading}</h3>
-      <p class="collab-source">${source}</p>`;
+      <div class="talk-meta">
+        <span class="tag">${langTag}</span><span class="tag">${year}</span>
+      </div>
+      <h3 class="talk-title"><span class="talk-type" aria-hidden="true">${titleIcon} </span>${title}</h3>
+      <p class="talk-event">${event}</p>
+      <div class="talk-links">${links}</div>`;
   }
 }
 

@@ -10,7 +10,8 @@
 export const posts = [
   {
     icon: '🌳',
-    tag: { es: 'Personal · 2025', en: 'Personal · 2025' },
+    tag: { es: 'Personal', en: 'Personal' },
+    year: '2025',
     title: { es: 'Tree shaking para la vida real', en: 'Tree shaking for real life' },
     url: '/blog/tree-shaking/',
     desc: {
@@ -20,7 +21,8 @@ export const posts = [
   },
   {
     icon: '🦑',
-    tag: { es: 'Carrera · 2025', en: 'Career · 2025' },
+    tag: { es: 'Carrera', en: 'Career' },
+    year: '2025',
     title: { es: 'El Juego del Calamar', en: 'Squid Game' },
     url: '/blog/squid-game/',
     desc: {
@@ -30,7 +32,8 @@ export const posts = [
   },
   {
     icon: '⚔️',
-    tag: { es: 'Liderazgo · 2025', en: 'Leadership · 2025' },
+    tag: { es: 'Liderazgo', en: 'Leadership' },
+    year: '2025',
     title: { es: 'Conmigo o contra mí', en: 'With me or against me' },
     url: '/blog/with-me-or-against-me/',
     desc: {

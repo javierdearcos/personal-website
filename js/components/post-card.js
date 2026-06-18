@@ -26,15 +26,21 @@ class PostCard extends HTMLElement {
   }
 
   render() {
-    const { icon, tag, title, url, desc } = this._data;
+    const { icon, tag, year, title, url, desc } = this._data;
+
+    const links = [
+      url && `<a href="${url}" target="_blank" rel="noopener" class="link-pill">🔗 <span data-i18n="link.url">URL</span></a>`,
+    ].filter(Boolean).join('');
 
     this.className = 'post-card';
     this.setAttribute('role', 'listitem');
     this.innerHTML = `
-      <div class="post-icon" aria-hidden="true">${icon}</div>
-      <span class="tag">${this.bilingual(tag)}</span>
-      <h3 class="post-title"><a href="${url}">${this.bilingual(title)}</a></h3>
-      <p class="post-desc">${this.bilingual(desc)}</p>`;
+      <div class="post-meta">
+        <span class="tag">${this.bilingual(tag)}</span><span class="tag">${year}</span>
+      </div>
+      <h3 class="post-title"><span class="post-icon" aria-hidden="true">${icon} </span>${this.bilingual(title)}</h3>
+      <p class="post-desc">${this.bilingual(desc)}</p>
+      <div class="post-links">${links}</div>`;
   }
 }
 

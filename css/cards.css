@@ -89,7 +89,17 @@
   transition: border-color var(--transition), transform var(--transition);
 }
 .post-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.post-icon { font-size: 1.5rem; }
+.post-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.post-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5em;
+  display: inline-block;
+}
 .post-title {
   font-size: 1rem;
   font-weight: 700;
@@ -97,4 +107,9 @@
   flex: 1;
 }
 .post-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.55; }
-.post-card a { margin-top: auto; font-size: 0.82rem; font-weight: 600; }
+.post-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}

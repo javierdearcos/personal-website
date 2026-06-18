@@ -149,8 +149,8 @@ The home page previews only the first three talks and collaborations
 (`PREVIEW_COUNT` in `js/main.js`), each followed by a "see all" link. The full
 lists live on separate subpages — talks at `/talks/` (`js/talks.js` +
 `data/talks.js`) and collaborations at `/collabs/` (`js/collabs.js` +
-`data/collabs.js`) — each reusing the same `<talk-card>` / `<collab-card>`
-elements and the shared `renderCards()` helper. Both the home previews and the
+`data/collabs.js`) — each reusing the same `<talk-card>`
+element and the shared `renderCards()` helper. Both the home previews and the
 subpages lay the cards out in the same wrapping grid (`.card-grid`). Adding an
 item to either data array updates both the home preview and its subpage with no
 markup changes.

@@ -9,7 +9,6 @@
  * also reaches the data-i18n attributes the cards emit.
  */
 import './components/talk-card.js';
-import './components/collab-card.js';
 import './components/post-card.js';
 import './components/focus-card.js';
 import './components/project-card.js';
@@ -50,7 +49,7 @@ function renderTech(mountId, items) {
 function render() {
   renderCards('focusGrid', 'focus-card', focusAreas);
   renderCards('talksGrid', 'talk-card', talks.slice(0, PREVIEW_COUNT));
-  renderCards('collabGrid', 'collab-card', collabs.slice(0, PREVIEW_COUNT));
+  renderCards('collabGrid', 'talk-card', collabs.slice(0, PREVIEW_COUNT));
   renderCards('postsGrid', 'post-card', posts);
   renderCards('projectList', 'project-card', projects.slice(0, PROJECTS_PREVIEW));
   renderTech('techGrid', technologies);

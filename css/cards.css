@@ -69,45 +69,9 @@
 .talk-event {
   font-size: 0.82rem;
   color: var(--muted);
+  line-height: 1.55;
 }
 .talk-links {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-top: auto;
-}
-
-/* ─── POST CARD ──────────────────────────────────────────────── */
-.post-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.post-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.post-meta {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.post-icon {
-  font-size: 1.2rem;
-  margin-right: 0.5em;
-  display: inline-block;
-}
-.post-title {
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
-  flex: 1;
-}
-.post-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.55; }
-.post-links {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;

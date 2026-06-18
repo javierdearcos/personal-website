@@ -18,8 +18,16 @@ class TalkCard extends HTMLElement {
     if (this._data) this.render();
   }
 
+  /** A string passes through; a `{es,en}` pair becomes two language spans. */
+  bilingual(value) {
+    if (value && typeof value === 'object') {
+      return `<span data-lang="es">${value.es}</span><span data-lang="en">${value.en}</span>`;
+    }
+    return value;
+  }
+
   render() {
-    const { langTag, year, icon, title, event, slides, video, audio, url } = this._data;
+    const { tag, year, icon, title, desc, slides, video, audio, url } = this._data;
     const links = [
       slides && `<a href="${slides}" target="_blank" rel="noopener" class="link-pill">🖥️ <span data-i18n="link.slides">Slides</span></a>`,
       video && `<a href="${video}" target="_blank" rel="noopener" class="link-pill">🎬 <span data-i18n="link.video">Video</span></a>`,
@@ -33,10 +41,10 @@ class TalkCard extends HTMLElement {
     this.setAttribute('role', 'listitem');
     this.innerHTML = `
       <div class="talk-meta">
-        <span class="tag">${langTag}</span><span class="tag">${year}</span>
+        <span class="tag">${this.bilingual(tag)}</span><span class="tag">${year}</span>
       </div>
-      <h3 class="talk-title"><span class="talk-type" aria-hidden="true">${titleIcon} </span>${title}</h3>
-      <p class="talk-event">${event}</p>
+      <h3 class="talk-title"><span class="talk-type" aria-hidden="true">${titleIcon} </span>${this.bilingual(title)}</h3>
+      <p class="talk-event">${this.bilingual(desc)}</p>
       <div class="talk-links">${links}</div>`;
   }
 }

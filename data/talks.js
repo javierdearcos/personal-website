@@ -6,6 +6,7 @@ export const talks = [
   {
     langTag: '🇪🇸 ES',
     year: '2026',
+    icon: '🎥',
     title: 'Deliver It: una historia de terror... o no',
     event: 'Commit Conf',
     slides: 'https://drive.google.com/file/d/1PyQHINngXhYOvR_2l9keIKw7nLJG6Tla/view?usp=sharing',
@@ -29,6 +30,7 @@ export const talks = [
   {
     langTag: '🇪🇸 ES',
     year: '2023',
+    icon: '🎥',
     title: 'Introducción al Backend con NestJS',
     event: 'Teach[t3ch] Winter Sessions',
     slides: 'https://drive.google.com/file/d/1A8LCzaMTBVvtGXz0eaj260r_vATYhjX2/view?usp=sharing',
@@ -36,6 +38,7 @@ export const talks = [
   {
     langTag: '🇬🇧 EN',
     year: '2022',
+    icon: '🎥',
     title: 'Generating code that generates code',
     event: 'Liferay Devcon',
     slides: 'https://drive.google.com/file/d/12z4gl6iCu4gwBJ_3j6v5tcYN_HKycmaM/view?usp=sharing',
@@ -67,6 +70,7 @@ export const talks = [
   {
     langTag: '🇬🇧 EN',
     year: '2021',
+    icon: '🎥',
     title: 'Building a SPA using Liferay\'s Headless APIs',
     event: 'Liferay Devcon',
     slides: "https://github.com/javierdearcos/Liferay-Travels-Backend/blob/master/DEVCON%202021%20-%20Building%20a%20SPA%20using%20Liferay's%20Headless%20APIs.pdf",
@@ -74,6 +78,7 @@ export const talks = [
   {
     langTag: '🇪🇸 ES',
     year: '2021',
+    icon: '🎥',
     title: 'Sleep Well Driven Development',
     event: 'Licorca Conf',
     slides: 'https://drive.google.com/file/d/1K2IYypz3PMPcEVCyxBdjewtUfwmJy41T/view?usp=sharing',
@@ -81,6 +86,7 @@ export const talks = [
   {
     langTag: '🇪🇸 ES',
     year: '2020',
+    icon: '🎥',
     title: 'Mutation Testing: Who watches the watchmen',
     event: 'Selected for the cancelled T3chfest',
     slides: 'https://drive.google.com/file/d/1VENjlH8bQ6dGwwDBDEDCpm-E_nvHmdVO/view?usp=sharing',

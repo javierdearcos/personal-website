@@ -1,14 +1,17 @@
 /**
- * <talk-card> — a single talk in the Talks grid.
+ * <entry-card> — a single entry in the collabs, posts and talks grid.
  *
  * Usage (set the `data` property, not an attribute):
- *   const el = document.createElement('talk-card');
- *   el.data = { langTag, year, title, event, slides?, video? };
+ *   const el = document.createElement('entry-card');
+ *   el.data = { tag, year, icon?, title, desc, slides?, video?, audio?, url? };
  *
+ * The `tag`, `year`, `title` and `desc` fields are either strings or `{es,en}` pairs
+ * so the cards follow the global language toggle (see js/i18n.js).
+ * 
  * Renders into light DOM so the global stylesheet and the i18n pass
  * (the Slides/Video labels carry data-i18n) keep working.
  */
-class TalkCard extends HTMLElement {
+class EntryCard extends HTMLElement {
   set data(value) {
     this._data = value;
     this.render();
@@ -37,16 +40,16 @@ class TalkCard extends HTMLElement {
 
     const titleIcon = icon || (video ? '🎥' : audio ? '🎧' : url ? '🔗' : '');
 
-    this.className = 'talk-card';
+    this.className = 'entry-card';
     this.setAttribute('role', 'listitem');
     this.innerHTML = `
-      <div class="talk-meta">
+      <div class="entry-meta">
         <span class="tag">${this.bilingual(tag)}</span><span class="tag">${year}</span>
       </div>
-      <h3 class="talk-title"><span class="talk-type" aria-hidden="true">${titleIcon} </span>${this.bilingual(title)}</h3>
-      <p class="talk-event">${this.bilingual(desc)}</p>
-      <div class="talk-links">${links}</div>`;
+      <h3 class="entry-title"><span class="entry-icon" aria-hidden="true">${titleIcon} </span>${this.bilingual(title)}</h3>
+      <p class="entry-desc">${this.bilingual(desc)}</p>
+      <div class="entry-links">${links}</div>`;
   }
 }
 
-customElements.define('talk-card', TalkCard);
+customElements.define('entry-card', EntryCard);

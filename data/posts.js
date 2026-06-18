@@ -4,7 +4,7 @@
  * lives at /blog/.
  *
  * `tag`, `title` and `desc` are `{ es, en }` pairs so the cards follow the
- * global language toggle (see js/components/talk-card.js). The full post
+ * global language toggle (see js/components/entry-card.js). The full post
  * bodies are translated separately under blog-src/<slug>/en.html.
  */
 export const posts = [

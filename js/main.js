@@ -8,7 +8,7 @@
  * Order matters: cards are rendered *before* applyLang() so the i18n pass
  * also reaches the data-i18n attributes the cards emit.
  */
-import './components/talk-card.js';
+import './components/entry-card.js';
 import './components/focus-card.js';
 import './components/project-card.js';
 
@@ -47,9 +47,9 @@ function renderTech(mountId, items) {
 
 function render() {
   renderCards('focusGrid', 'focus-card', focusAreas);
-  renderCards('talksGrid', 'talk-card', talks.slice(0, PREVIEW_COUNT));
-  renderCards('collabGrid', 'talk-card', collabs.slice(0, PREVIEW_COUNT));
-  renderCards('postsGrid', 'talk-card', posts.slice(0, PREVIEW_COUNT));
+  renderCards('talksGrid', 'entry-card', talks.slice(0, PREVIEW_COUNT));
+  renderCards('collabGrid', 'entry-card', collabs.slice(0, PREVIEW_COUNT));
+  renderCards('postsGrid', 'entry-card', posts.slice(0, PREVIEW_COUNT));
   renderCards('projectList', 'project-card', projects.slice(0, PROJECTS_PREVIEW));
   renderTech('techGrid', technologies);
 }

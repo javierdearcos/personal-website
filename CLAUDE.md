@@ -22,7 +22,7 @@ root make it work. If you changed any blog post, run `python3 tools/build-blog.p
 ## Architecture
 
 - **Web Components in light DOM** (no Shadow DOM) so the global stylesheet and
-  the i18n pass apply normally. Defined in `js/components/` (`<talk-card>`,
+  the i18n pass apply normally. Defined in `js/components/` (`<entry-card>`,
   `<focus-card>`, `<project-card>`).
 - **Content lives in `data/*.js`** as plain arrays. Edit the array to update the
   site — no markup changes. `js/render.js`'s `renderCards()` creates one element

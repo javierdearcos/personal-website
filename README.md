@@ -77,7 +77,7 @@ js/
   nav.js                Shared mobile hamburger toggle (all pages)
   i18n.js               Translation catalog + language toggle
   theme.js              Dark/light theme + persistence
-  components/           Custom elements (<talk-card>, <project-card>, …)
+  components/           Custom elements (<entry-card>, <project-card>, …)
 data/
   talks.js collabs.js   Content as plain data arrays — edit these to update
   posts.js projects.js  the site without touching markup
@@ -149,7 +149,7 @@ The home page previews only the first three talks and collaborations
 (`PREVIEW_COUNT` in `js/main.js`), each followed by a "see all" link. The full
 lists live on separate subpages — talks at `/talks/` (`js/talks.js` +
 `data/talks.js`) and collaborations at `/collabs/` (`js/collabs.js` +
-`data/collabs.js`) — each reusing the same `<talk-card>`
+`data/collabs.js`) — each reusing the same `<entry-card>`
 element and the shared `renderCards()` helper. Both the home previews and the
 subpages lay the cards out in the same wrapping grid (`.card-grid`). Adding an
 item to either data array updates both the home preview and its subpage with no

@@ -5,7 +5,7 @@
  * first few). Reuses the same data, custom element, theme and i18n as the
  * home page.
  */
-import './components/talk-card.js';
+import './components/entry-card.js';
 
 import { collabs } from '../data/collabs.js';
 
@@ -16,7 +16,7 @@ import { initNav } from './nav.js';
 
 function init() {
   // Cards first, so applyLang() also reaches their data-i18n labels.
-  renderCards('collabsGrid', 'talk-card', collabs);
+  renderCards('collabsGrid', 'entry-card', collabs);
   initTheme();
   applyLang(initLang());
 
